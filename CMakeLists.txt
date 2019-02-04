@@ -265,6 +265,8 @@ set (libs ${QT_LIBRARIES}
 	${PYLON5_LIBRARIES}
 	${OpenCV_LIBS}
 	${FLYCAP_LIBS}
+	wsock32 #win only
+	ws2_32	#win only
 )
 target_link_libraries(sslvision ${libs})
 if(USE_QT5)

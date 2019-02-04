@@ -592,8 +592,6 @@ CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: C:/msys64
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: C:/msys64/mingw32/include/pngconf.h
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: C:/msys64/mingw32/include/pnglibconf.h
 
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj: ../src/shared/capture/capturedc1394v2.cpp
-
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: ../src/shared/util/colors.h
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: ../src/shared/util/conversions.h
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: ../src/shared/util/image_interface.h
@@ -1035,8 +1033,6 @@ CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: C:/msys64/
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: C:/msys64/mingw32/include/google/protobuf/stubs/shared_ptr.h
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: C:/msys64/mingw32/include/google/protobuf/stubs/template_util.h
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: C:/msys64/mingw32/include/google/protobuf/stubs/type_traits.h
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj: ../src/shared/capture/capturev4l.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj: ../src/shared/cmvision/cmvision_region.h
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj: ../src/shared/cmvision/cmvision_threshold.h
@@ -8429,16 +8425,12 @@ CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_a
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/IFEKRGB2B4/moc_field.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/IFEKRGB2B4/moc_lut3d.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/WBE6WDNUWH/moc_capture_generator.cpp
-CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/WBE6WDNUWH/moc_capturedc1394v2.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/WBE6WDNUWH/moc_capturefromfile.cpp
-CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/WBE6WDNUWH/moc_capturev4l.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/WLC3BHICOR/moc_VarNotifier.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/mocs_compilation.cpp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/capture/capture_generator.h
-CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/capture/capturedc1394v2.h
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/capture/capturefromfile.h
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/capture/captureinterface.h
-CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/capture/capturev4l.h
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/cmpattern/cmpattern_pattern.h
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/cmpattern/cmpattern_team.h
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: ../src/shared/cmpattern/cmpattern_teamdetector.h

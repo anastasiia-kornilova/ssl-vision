@@ -592,8 +592,6 @@ CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj
  C:/msys64/mingw32/include/png.h
  C:/msys64/mingw32/include/pngconf.h
  C:/msys64/mingw32/include/pnglibconf.h
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj
- C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturedc1394v2.cpp
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj
  ../src/shared/util/colors.h
  ../src/shared/util/conversions.h
@@ -1036,8 +1034,6 @@ CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj
  C:/msys64/mingw32/include/google/protobuf/stubs/shared_ptr.h
  C:/msys64/mingw32/include/google/protobuf/stubs/template_util.h
  C:/msys64/mingw32/include/google/protobuf/stubs/type_traits.h
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj
- C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturev4l.cpp
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj
  ../src/shared/cmvision/cmvision_region.h
  ../src/shared/cmvision/cmvision_threshold.h
@@ -8430,16 +8426,12 @@ CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/IFEKRGB2B4/moc_field.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/IFEKRGB2B4/moc_lut3d.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/WBE6WDNUWH/moc_capture_generator.cpp
- C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/WBE6WDNUWH/moc_capturedc1394v2.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/WBE6WDNUWH/moc_capturefromfile.cpp
- C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/WBE6WDNUWH/moc_capturev4l.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/WLC3BHICOR/moc_VarNotifier.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-build-debug/sslvision_autogen/mocs_compilation.cpp
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capture_generator.h
- C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturedc1394v2.h
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturefromfile.h
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/captureinterface.h
- C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturev4l.h
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/cmpattern/cmpattern_pattern.h
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/cmpattern/cmpattern_team.h
  C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/cmpattern/cmpattern_teamdetector.h

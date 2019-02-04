@@ -1659,33 +1659,6 @@ src/shared/capture/capture_generator.cpp.s:
 	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.s
 .PHONY : src/shared/capture/capture_generator.cpp.s
 
-src/shared/capture/capturedc1394v2.obj: src/shared/capture/capturedc1394v2.cpp.obj
-
-.PHONY : src/shared/capture/capturedc1394v2.obj
-
-# target to build an object file
-src/shared/capture/capturedc1394v2.cpp.obj:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj
-.PHONY : src/shared/capture/capturedc1394v2.cpp.obj
-
-src/shared/capture/capturedc1394v2.i: src/shared/capture/capturedc1394v2.cpp.i
-
-.PHONY : src/shared/capture/capturedc1394v2.i
-
-# target to preprocess a source file
-src/shared/capture/capturedc1394v2.cpp.i:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.i
-.PHONY : src/shared/capture/capturedc1394v2.cpp.i
-
-src/shared/capture/capturedc1394v2.s: src/shared/capture/capturedc1394v2.cpp.s
-
-.PHONY : src/shared/capture/capturedc1394v2.s
-
-# target to generate assembly for a file
-src/shared/capture/capturedc1394v2.cpp.s:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.s
-.PHONY : src/shared/capture/capturedc1394v2.cpp.s
-
 src/shared/capture/capturefromfile.obj: src/shared/capture/capturefromfile.cpp.obj
 
 .PHONY : src/shared/capture/capturefromfile.obj
@@ -1739,33 +1712,6 @@ src/shared/capture/captureinterface.s: src/shared/capture/captureinterface.cpp.s
 src/shared/capture/captureinterface.cpp.s:
 	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.s
 .PHONY : src/shared/capture/captureinterface.cpp.s
-
-src/shared/capture/capturev4l.obj: src/shared/capture/capturev4l.cpp.obj
-
-.PHONY : src/shared/capture/capturev4l.obj
-
-# target to build an object file
-src/shared/capture/capturev4l.cpp.obj:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj
-.PHONY : src/shared/capture/capturev4l.cpp.obj
-
-src/shared/capture/capturev4l.i: src/shared/capture/capturev4l.cpp.i
-
-.PHONY : src/shared/capture/capturev4l.i
-
-# target to preprocess a source file
-src/shared/capture/capturev4l.cpp.i:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.i
-.PHONY : src/shared/capture/capturev4l.cpp.i
-
-src/shared/capture/capturev4l.s: src/shared/capture/capturev4l.cpp.s
-
-.PHONY : src/shared/capture/capturev4l.s
-
-# target to generate assembly for a file
-src/shared/capture/capturev4l.cpp.s:
-	$(MAKE) -f CMakeFiles\sslvision.dir\build.make CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.s
-.PHONY : src/shared/capture/capturev4l.cpp.s
 
 src/shared/cmpattern/cmpattern_pattern.obj: src/shared/cmpattern/cmpattern_pattern.cpp.obj
 
@@ -3481,18 +3427,12 @@ help:
 	@echo ... src/shared/capture/capture_generator.obj
 	@echo ... src/shared/capture/capture_generator.i
 	@echo ... src/shared/capture/capture_generator.s
-	@echo ... src/shared/capture/capturedc1394v2.obj
-	@echo ... src/shared/capture/capturedc1394v2.i
-	@echo ... src/shared/capture/capturedc1394v2.s
 	@echo ... src/shared/capture/capturefromfile.obj
 	@echo ... src/shared/capture/capturefromfile.i
 	@echo ... src/shared/capture/capturefromfile.s
 	@echo ... src/shared/capture/captureinterface.obj
 	@echo ... src/shared/capture/captureinterface.i
 	@echo ... src/shared/capture/captureinterface.s
-	@echo ... src/shared/capture/capturev4l.obj
-	@echo ... src/shared/capture/capturev4l.i
-	@echo ... src/shared/capture/capturev4l.s
 	@echo ... src/shared/cmpattern/cmpattern_pattern.obj
 	@echo ... src/shared/cmpattern/cmpattern_pattern.i
 	@echo ... src/shared/cmpattern/cmpattern_pattern.s

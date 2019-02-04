@@ -20,7 +20,5 @@
 #include "IFEKRGB2B4/moc_field.cpp"
 #include "IFEKRGB2B4/moc_lut3d.cpp"
 #include "WBE6WDNUWH/moc_capture_generator.cpp"
-#include "WBE6WDNUWH/moc_capturedc1394v2.cpp"
 #include "WBE6WDNUWH/moc_capturefromfile.cpp"
-#include "WBE6WDNUWH/moc_capturev4l.cpp"
 #include "WLC3BHICOR/moc_VarNotifier.cpp"

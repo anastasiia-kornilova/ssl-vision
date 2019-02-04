@@ -29,8 +29,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sslvision.dir/messages_robocup_ssl_refbox_log.pb.cc.obj"
   "CMakeFiles/sslvision.dir/messages_robocup_ssl_geometry_legacy.pb.cc.obj"
   "CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper_legacy.pb.cc.obj"
-  "CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj"
-  "CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj"
   "CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj"
   "CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj"
   "CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj"

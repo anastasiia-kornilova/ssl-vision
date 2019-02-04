@@ -302,7 +302,7 @@ ssl-vision_BINARY_DIR:STATIC=C:/Users/Dmitrii/Documents/Github/ssl-forked/cmake-
 ssl-vision_SOURCE_DIR:STATIC=C:/Users/Dmitrii/Documents/Github/ssl-forked
 
 //Dependencies for the target
-sslvision_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;general;C:/msys64/mingw32/lib/libprotobuf.dll.a;general;Qt5::Widgets;
+sslvision_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;general;C:/msys64/mingw32/lib/libprotobuf.dll.a;general;wsock32;general;ws2_32;general;Qt5::Widgets;
 
 
 ########################

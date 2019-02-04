@@ -99,8 +99,8 @@ clean: CMakeFiles/GenerateProto.dir/clean
 # Target rules for target CMakeFiles/vision.dir
 
 # All Build rule for target.
-CMakeFiles/vision.dir/all: CMakeFiles/sslvision.dir/all
 CMakeFiles/vision.dir/all: CMakeFiles/vision_autogen.dir/all
+CMakeFiles/vision.dir/all: CMakeFiles/sslvision.dir/all
 	$(MAKE) -f CMakeFiles\vision.dir\build.make CMakeFiles/vision.dir/depend
 	$(MAKE) -f CMakeFiles\vision.dir\build.make CMakeFiles/vision.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target vision"
@@ -175,8 +175,8 @@ clean: CMakeFiles/sslvision.dir/clean
 # Target rules for target CMakeFiles/client.dir
 
 # All Build rule for target.
-CMakeFiles/client.dir/all: CMakeFiles/sslvision.dir/all
 CMakeFiles/client.dir/all: CMakeFiles/client_autogen.dir/all
+CMakeFiles/client.dir/all: CMakeFiles/sslvision.dir/all
 	$(MAKE) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target client"
@@ -213,8 +213,8 @@ clean: CMakeFiles/client.dir/clean
 # Target rules for target CMakeFiles/logClient.dir
 
 # All Build rule for target.
-CMakeFiles/logClient.dir/all: CMakeFiles/sslvision.dir/all
 CMakeFiles/logClient.dir/all: CMakeFiles/logClient_autogen.dir/all
+CMakeFiles/logClient.dir/all: CMakeFiles/sslvision.dir/all
 	$(MAKE) -f CMakeFiles\logClient.dir\build.make CMakeFiles/logClient.dir/depend
 	$(MAKE) -f CMakeFiles\logClient.dir\build.make CMakeFiles/logClient.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=12,13,14,15,16 "Built target logClient"
@@ -251,8 +251,8 @@ clean: CMakeFiles/logClient.dir/clean
 # Target rules for target CMakeFiles/graphicalClient.dir
 
 # All Build rule for target.
-CMakeFiles/graphicalClient.dir/all: CMakeFiles/sslvision.dir/all
 CMakeFiles/graphicalClient.dir/all: CMakeFiles/graphicalClient_autogen.dir/all
+CMakeFiles/graphicalClient.dir/all: CMakeFiles/sslvision.dir/all
 	$(MAKE) -f CMakeFiles\graphicalClient.dir\build.make CMakeFiles/graphicalClient.dir/depend
 	$(MAKE) -f CMakeFiles\graphicalClient.dir\build.make CMakeFiles/graphicalClient.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=8,9,10 "Built target graphicalClient"

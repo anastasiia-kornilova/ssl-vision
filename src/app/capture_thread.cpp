@@ -54,10 +54,14 @@ CaptureThread::CaptureThread(int cam_id)
   stack = 0;
   counter=new FrameCounter();
   capture=0;
+#ifdef __WIN32__
+#else
   captureDC1394 = new CaptureDC1394v2(dc1394,camId);
+  captureV4L = new CaptureV4L(v4l,camId);
+#endif
   captureFiles = new CaptureFromFile(fromfile, camId);
   captureGenerator = new CaptureGenerator(generator);
-  captureV4L = new CaptureV4L(v4l,camId);
+
 
 #ifdef PYLON5
   captureModule->addItem("Basler GigE");

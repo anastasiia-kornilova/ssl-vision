@@ -204,38 +204,10 @@ CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper_legacy.pb.cc.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper_legacy.pb.cc.s"
 	C:\msys64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\messages_robocup_ssl_wrapper_legacy.pb.cc -o CMakeFiles\sslvision.dir\messages_robocup_ssl_wrapper_legacy.pb.cc.s
 
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj: CMakeFiles/sslvision.dir/flags.make
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj: ../src/shared/capture/capturedc1394v2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj"
-	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\capture\capturedc1394v2.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturedc1394v2.cpp
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.i"
-	C:\msys64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturedc1394v2.cpp > CMakeFiles\sslvision.dir\src\shared\capture\capturedc1394v2.cpp.i
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.s"
-	C:\msys64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturedc1394v2.cpp -o CMakeFiles\sslvision.dir\src\shared\capture\capturedc1394v2.cpp.s
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj: CMakeFiles/sslvision.dir/flags.make
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj: ../src/shared/capture/capturev4l.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj"
-	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\capture\capturev4l.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturev4l.cpp
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.i"
-	C:\msys64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturev4l.cpp > CMakeFiles\sslvision.dir\src\shared\capture\capturev4l.cpp.i
-
-CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.s"
-	C:\msys64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturev4l.cpp -o CMakeFiles\sslvision.dir\src\shared\capture\capturev4l.cpp.s
-
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj: ../src/shared/capture/capturefromfile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\capture\capturefromfile.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capturefromfile.cpp
 
 CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.i: cmake_force
@@ -249,7 +221,7 @@ CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj: ../src/shared/capture/capture_generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\capture\capture_generator.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\capture_generator.cpp
 
 CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.i: cmake_force
@@ -263,7 +235,7 @@ CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj: ../src/shared/capture/captureinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\capture\captureinterface.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\capture\captureinterface.cpp
 
 CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.i: cmake_force
@@ -277,7 +249,7 @@ CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj: ../src/shared/cmpattern/cmpattern_pattern.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmpattern\cmpattern_pattern.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmpattern\cmpattern_pattern.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.i: cmake_force
@@ -291,7 +263,7 @@ CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_pattern.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.obj: ../src/shared/cmpattern/cmpattern_team.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmpattern\cmpattern_team.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmpattern\cmpattern_team.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.i: cmake_force
@@ -305,7 +277,7 @@ CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_team.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.obj: ../src/shared/cmpattern/cmpattern_teamdetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmpattern\cmpattern_teamdetector.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmpattern\cmpattern_teamdetector.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.i: cmake_force
@@ -319,7 +291,7 @@ CMakeFiles/sslvision.dir/src/shared/cmpattern/cmpattern_teamdetector.cpp.s: cmak
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.obj: ../src/shared/cmvision/cmvision_histogram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmvision\cmvision_histogram.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmvision\cmvision_histogram.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.i: cmake_force
@@ -333,7 +305,7 @@ CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_histogram.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.obj: ../src/shared/cmvision/cmvision_region.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmvision\cmvision_region.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmvision\cmvision_region.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.i: cmake_force
@@ -347,7 +319,7 @@ CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_region.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.obj: ../src/shared/cmvision/cmvision_threshold.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\cmvision\cmvision_threshold.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\cmvision\cmvision_threshold.cpp
 
 CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.i: cmake_force
@@ -361,7 +333,7 @@ CMakeFiles/sslvision.dir/src/shared/cmvision/cmvision_threshold.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.obj: ../src/shared/gl/glcamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\gl\glcamera.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\gl\glcamera.cpp
 
 CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.i: cmake_force
@@ -375,7 +347,7 @@ CMakeFiles/sslvision.dir/src/shared/gl/glcamera.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.obj: ../src/shared/gl/globject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\gl\globject.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\gl\globject.cpp
 
 CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.i: cmake_force
@@ -389,7 +361,7 @@ CMakeFiles/sslvision.dir/src/shared/gl/globject.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.obj: ../src/shared/net/netraw.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\net\netraw.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\net\netraw.cpp
 
 CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.i: cmake_force
@@ -403,7 +375,7 @@ CMakeFiles/sslvision.dir/src/shared/net/netraw.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.obj: ../src/shared/net/robocup_ssl_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\net\robocup_ssl_client.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\net\robocup_ssl_client.cpp
 
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.i: cmake_force
@@ -417,7 +389,7 @@ CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_client.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.obj: ../src/shared/net/robocup_ssl_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\net\robocup_ssl_server.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\net\robocup_ssl_server.cpp
 
 CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.i: cmake_force
@@ -431,7 +403,7 @@ CMakeFiles/sslvision.dir/src/shared/net/robocup_ssl_server.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.obj: ../src/shared/util/affinity_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\affinity_manager.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\affinity_manager.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.i: cmake_force
@@ -445,7 +417,7 @@ CMakeFiles/sslvision.dir/src/shared/util/affinity_manager.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.obj: ../src/shared/util/camera_calibration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\camera_calibration.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\camera_calibration.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.i: cmake_force
@@ -459,7 +431,7 @@ CMakeFiles/sslvision.dir/src/shared/util/camera_calibration.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.obj: ../src/shared/util/conversions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\conversions.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\conversions.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.i: cmake_force
@@ -473,7 +445,7 @@ CMakeFiles/sslvision.dir/src/shared/util/conversions.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.obj: ../src/shared/util/global_random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\global_random.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\global_random.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.i: cmake_force
@@ -487,7 +459,7 @@ CMakeFiles/sslvision.dir/src/shared/util/global_random.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/image.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/image.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/image.cpp.obj: ../src/shared/util/image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/image.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/image.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\image.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\image.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/image.cpp.i: cmake_force
@@ -501,7 +473,7 @@ CMakeFiles/sslvision.dir/src/shared/util/image.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.obj: ../src/shared/util/image_io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\image_io.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\image_io.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.i: cmake_force
@@ -515,7 +487,7 @@ CMakeFiles/sslvision.dir/src/shared/util/image_io.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.obj: ../src/shared/util/lut3d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\lut3d.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\lut3d.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.i: cmake_force
@@ -529,7 +501,7 @@ CMakeFiles/sslvision.dir/src/shared/util/lut3d.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.obj: ../src/shared/util/qgetopt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\qgetopt.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\qgetopt.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.i: cmake_force
@@ -543,7 +515,7 @@ CMakeFiles/sslvision.dir/src/shared/util/qgetopt.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/random.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/random.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/random.cpp.obj: ../src/shared/util/random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/random.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/random.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\random.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\random.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/random.cpp.i: cmake_force
@@ -557,7 +529,7 @@ CMakeFiles/sslvision.dir/src/shared/util/random.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.obj: ../src/shared/util/rawimage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\rawimage.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\rawimage.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.i: cmake_force
@@ -571,7 +543,7 @@ CMakeFiles/sslvision.dir/src/shared/util/rawimage.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.obj: ../src/shared/util/ringbuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\ringbuffer.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\ringbuffer.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.i: cmake_force
@@ -585,7 +557,7 @@ CMakeFiles/sslvision.dir/src/shared/util/ringbuffer.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.obj: ../src/shared/util/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\texture.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\texture.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.i: cmake_force
@@ -599,7 +571,7 @@ CMakeFiles/sslvision.dir/src/shared/util/texture.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.obj: ../src/shared/util/framelimiter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\framelimiter.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\framelimiter.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.i: cmake_force
@@ -613,7 +585,7 @@ CMakeFiles/sslvision.dir/src/shared/util/framelimiter.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.obj: ../src/shared/vartypes/VarBase64.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarBase64.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarBase64.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.i: cmake_force
@@ -627,7 +599,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarBase64.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.obj: ../src/shared/vartypes/VarNotifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarNotifier.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarNotifier.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.i: cmake_force
@@ -641,7 +613,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarNotifier.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.obj: ../src/shared/vartypes/VarTypes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarTypes.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarTypes.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.i: cmake_force
@@ -655,7 +627,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypes.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.obj: ../src/shared/vartypes/VarXML.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarXML.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarXML.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.i: cmake_force
@@ -669,7 +641,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarXML.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.obj: ../src/shared/vartypes/VarTypesInstance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarTypesInstance.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarTypesInstance.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.i: cmake_force
@@ -683,7 +655,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesInstance.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.obj: ../src/shared/vartypes/VarTypesFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\VarTypesFactory.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\VarTypesFactory.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.i: cmake_force
@@ -697,7 +669,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/VarTypesFactory.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.obj: ../src/shared/vartypes/xml/xmlParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\xml\xmlParser.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\xml\xmlParser.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.i: cmake_force
@@ -711,7 +683,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/xml/xmlParser.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.obj: ../src/shared/vartypes/primitives/VarStringVal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarStringVal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarStringVal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.i: cmake_force
@@ -725,7 +697,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringVal.cpp.s: cmak
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.obj: ../src/shared/vartypes/primitives/VarBoolVal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarBoolVal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarBoolVal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.i: cmake_force
@@ -739,7 +711,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBoolVal.cpp.s: cmake_
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.obj: ../src/shared/vartypes/primitives/VarVal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarVal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarVal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.i: cmake_force
@@ -753,7 +725,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarVal.cpp.s: cmake_forc
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.obj: ../src/shared/vartypes/primitives/VarIntVal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarIntVal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarIntVal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.i: cmake_force
@@ -767,7 +739,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarIntVal.cpp.s: cmake_f
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.obj: ../src/shared/vartypes/primitives/VarDoubleVal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarDoubleVal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarDoubleVal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.i: cmake_force
@@ -781,7 +753,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDoubleVal.cpp.s: cmak
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.obj: ../src/shared/vartypes/primitives/VarType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarType.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarType.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.i: cmake_force
@@ -795,7 +767,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarType.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.obj: ../src/shared/vartypes/primitives/VarBlob.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarBlob.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarBlob.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.i: cmake_force
@@ -809,7 +781,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBlob.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.obj: ../src/shared/vartypes/primitives/VarBool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarBool.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarBool.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.i: cmake_force
@@ -823,7 +795,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarBool.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.obj: ../src/shared/vartypes/primitives/VarDouble.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarDouble.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarDouble.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.i: cmake_force
@@ -837,7 +809,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarDouble.cpp.s: cmake_f
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.obj: ../src/shared/vartypes/primitives/VarExternal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarExternal.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarExternal.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.i: cmake_force
@@ -851,7 +823,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarExternal.cpp.s: cmake
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.obj: ../src/shared/vartypes/primitives/VarInt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarInt.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarInt.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.i: cmake_force
@@ -865,7 +837,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarInt.cpp.s: cmake_forc
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.obj: ../src/shared/vartypes/primitives/VarList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarList.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarList.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.i: cmake_force
@@ -879,7 +851,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarList.cpp.s: cmake_for
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.obj: ../src/shared/vartypes/primitives/VarQWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarQWidget.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarQWidget.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.i: cmake_force
@@ -893,7 +865,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarQWidget.cpp.s: cmake_
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.obj: ../src/shared/vartypes/primitives/VarSelection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarSelection.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarSelection.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.i: cmake_force
@@ -907,7 +879,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarSelection.cpp.s: cmak
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.obj: ../src/shared/vartypes/primitives/VarString.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarString.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarString.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.i: cmake_force
@@ -921,7 +893,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarString.cpp.s: cmake_f
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.obj: ../src/shared/vartypes/primitives/VarStringEnum.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarStringEnum.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarStringEnum.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.i: cmake_force
@@ -935,7 +907,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarStringEnum.cpp.s: cma
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.obj: ../src/shared/vartypes/primitives/VarTrigger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\primitives\VarTrigger.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\primitives\VarTrigger.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.i: cmake_force
@@ -949,7 +921,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/primitives/VarTrigger.cpp.s: cmake_
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.obj: ../src/shared/vartypes/gui/VarItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\gui\VarItem.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\gui\VarItem.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.i: cmake_force
@@ -963,7 +935,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItem.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.obj: ../src/shared/vartypes/gui/VarItemDelegate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\gui\VarItemDelegate.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\gui\VarItemDelegate.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.i: cmake_force
@@ -977,7 +949,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarItemDelegate.cpp.s: cmake_fo
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.obj: ../src/shared/vartypes/gui/VarTreeModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\gui\VarTreeModel.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\gui\VarTreeModel.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.i: cmake_force
@@ -991,7 +963,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeModel.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.obj: ../src/shared/vartypes/gui/VarTreeView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\gui\VarTreeView.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\gui\VarTreeView.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.i: cmake_force
@@ -1005,7 +977,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeView.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.obj: ../src/shared/vartypes/gui/VarTreeViewOptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\vartypes\gui\VarTreeViewOptions.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\vartypes\gui\VarTreeViewOptions.cpp
 
 CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.i: cmake_force
@@ -1019,7 +991,7 @@ CMakeFiles/sslvision.dir/src/shared/vartypes/gui/VarTreeViewOptions.cpp.s: cmake
 CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.obj: ../src/shared/util/helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\helpers.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\helpers.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.i: cmake_force
@@ -1033,7 +1005,7 @@ CMakeFiles/sslvision.dir/src/shared/util/helpers.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj: ../src/shared/util/field.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\src\shared\util\field.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\src\shared\util\field.cpp
 
 CMakeFiles/sslvision.dir/src/shared/util/field.cpp.i: cmake_force
@@ -1047,7 +1019,7 @@ CMakeFiles/sslvision.dir/src/shared/util/field.cpp.s: cmake_force
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: CMakeFiles/sslvision.dir/flags.make
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: CMakeFiles/sslvision.dir/includes_CXX.rsp
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj: sslvision_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj"
 	C:\msys64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sslvision.dir\sslvision_autogen\mocs_compilation.cpp.obj -c C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\sslvision_autogen\mocs_compilation.cpp
 
 CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.i: cmake_force
@@ -1067,8 +1039,6 @@ sslvision_OBJECTS = \
 "CMakeFiles/sslvision.dir/messages_robocup_ssl_refbox_log.pb.cc.obj" \
 "CMakeFiles/sslvision.dir/messages_robocup_ssl_geometry_legacy.pb.cc.obj" \
 "CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper_legacy.pb.cc.obj" \
-"CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj" \
-"CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj" \
 "CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj" \
 "CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj" \
 "CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj" \
@@ -1139,8 +1109,6 @@ libsslvision.a: CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper.pb.cc.obj
 libsslvision.a: CMakeFiles/sslvision.dir/messages_robocup_ssl_refbox_log.pb.cc.obj
 libsslvision.a: CMakeFiles/sslvision.dir/messages_robocup_ssl_geometry_legacy.pb.cc.obj
 libsslvision.a: CMakeFiles/sslvision.dir/messages_robocup_ssl_wrapper_legacy.pb.cc.obj
-libsslvision.a: CMakeFiles/sslvision.dir/src/shared/capture/capturedc1394v2.cpp.obj
-libsslvision.a: CMakeFiles/sslvision.dir/src/shared/capture/capturev4l.cpp.obj
 libsslvision.a: CMakeFiles/sslvision.dir/src/shared/capture/capturefromfile.cpp.obj
 libsslvision.a: CMakeFiles/sslvision.dir/src/shared/capture/capture_generator.cpp.obj
 libsslvision.a: CMakeFiles/sslvision.dir/src/shared/capture/captureinterface.cpp.obj
@@ -1202,7 +1170,7 @@ libsslvision.a: CMakeFiles/sslvision.dir/src/shared/util/field.cpp.obj
 libsslvision.a: CMakeFiles/sslvision.dir/sslvision_autogen/mocs_compilation.cpp.obj
 libsslvision.a: CMakeFiles/sslvision.dir/build.make
 libsslvision.a: CMakeFiles/sslvision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking CXX static library libsslvision.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Dmitrii\Documents\Github\ssl-forked\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking CXX static library libsslvision.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\sslvision.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sslvision.dir\link.txt --verbose=$(VERBOSE)
 

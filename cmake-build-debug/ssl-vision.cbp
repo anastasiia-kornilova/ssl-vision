@@ -907,12 +907,6 @@
 		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capture_generator.h">
 			<Option target="sslvision"/>
 		</Unit>
-		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturedc1394v2.cpp">
-			<Option target="sslvision"/>
-		</Unit>
-		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturedc1394v2.h">
-			<Option target="sslvision"/>
-		</Unit>
 		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturefromfile.cpp">
 			<Option target="sslvision"/>
 		</Unit>
@@ -923,12 +917,6 @@
 			<Option target="sslvision"/>
 		</Unit>
 		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/captureinterface.h">
-			<Option target="sslvision"/>
-		</Unit>
-		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturev4l.cpp">
-			<Option target="sslvision"/>
-		</Unit>
-		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/capture/capturev4l.h">
 			<Option target="sslvision"/>
 		</Unit>
 		<Unit filename="C:/Users/Dmitrii/Documents/Github/ssl-forked/src/shared/cmpattern/cmpattern_pattern.cpp">

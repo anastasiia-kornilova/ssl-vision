@@ -150,11 +150,11 @@ class GlobalCaptureDC1394instanceManager
 
   Overall, it not only provides capture-abilities, but also full
   on-the-fly configuration abilities through the VarTypes system.
-  
+
   Using this capture-method, you should no longer be required
   to use third party tools, such as Coriander, to configure your
   firewire cameras before capturing.
-  
+
   If you find your camera not working correctly, or discover a bug,
   please inform the author, as we are aiming for complete camera
   coverage.
@@ -429,7 +429,7 @@ public:
 
   void readAllParameterProperties();
 
-  /// will perform a pure memcpy of an image, independent of vartypes 
+  /// will perform a pure memcpy of an image, independent of vartypes
   /// conversion settings
   bool copyFrame(const RawImage & src, RawImage & target);
 
