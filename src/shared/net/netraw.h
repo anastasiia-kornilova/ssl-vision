@@ -2,22 +2,21 @@
 #define _INCLUDED_NETRAW_H_
 
 #include <sys/types.h>
-#include <ws2tcpip.h>
 //#include <sys/socket.h>
 //#include <netinet/in.h>
 //#include <arpa/inet.h>
 #include <winsock2.h>
 #include <stdio.h>
 #include <string.h>
-
+//#include <QUdpSocket>
 namespace Net{
 
 //====================================================================//
 //  Net::Address: Network address class
 //  (C) James Bruce
 //====================================================================//
-
-class Address{
+typedef int socklen_t;
+class Address {
   sockaddr addr;
   socklen_t addr_len;
 public:
@@ -40,7 +39,7 @@ public:
   void clear()
     {reset();}
 
-  in_addr_t getInAddr() const;
+  u_long getInAddr() const;
 
   void print(FILE *out = stdout) const;
 
@@ -64,7 +63,7 @@ public:
   ~UDP() {close();}
 
   bool open(int port = 0, bool share_port_for_multicasting=false, bool multicast_include_localhost=false, bool blocking=false);
-  bool addMulticast(const Address &multiaddr,const Address &interface);
+  bool addMulticast(const Address &multiaddr, const Address &interface_);
   void close();
   bool isOpen() const
     {return(fd >= 0);}
