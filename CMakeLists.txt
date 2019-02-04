@@ -1,5 +1,6 @@
 project(ssl-vision)
-set(USE_QT5 FALSE CACHE BOOL "Use Qt5 instead of Qt4")
+#set(USE_QT5 FALSE CACHE BOOL "Use Qt5 instead of Qt4")
+set(USE_QT5 TRUE)
 if(USE_QT5)
 	cmake_minimum_required(VERSION 2.8.9)
 	if(POLICY CMP0020)
@@ -38,7 +39,7 @@ endif()
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Eigen3 REQUIRED eigen3)
-pkg_check_modules(DC1394 REQUIRED libdc1394-2)
+#pkg_check_modules(DC1394 REQUIRED libdc1394-2)
 
 if(USE_QT5)
 	set(CMAKE_INCLUDE_CURRENT_DIR ON)

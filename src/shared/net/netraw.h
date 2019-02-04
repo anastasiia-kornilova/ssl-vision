@@ -2,10 +2,11 @@
 #define _INCLUDED_NETRAW_H_
 
 #include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
+#include <ws2tcpip.h>
+//#include <sys/socket.h>
+//#include <netinet/in.h>
+//#include <arpa/inet.h>
+#include <winsock2.h>
 #include <stdio.h>
 #include <string.h>
 

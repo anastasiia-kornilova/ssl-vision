@@ -1,9 +1,10 @@
 #include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/poll.h>
+//#include <sys/socket.h>
+#include <ws2tcpip.h>
+//#include <sys/poll.h>
 
 #include <stdio.h>
-#include <netdb.h>
+//#include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
 
