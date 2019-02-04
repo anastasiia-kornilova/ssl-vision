@@ -4,3 +4,5 @@
 /settings.xml
 /backup
 /test-data/**
+/cmake*/
+.idea*
