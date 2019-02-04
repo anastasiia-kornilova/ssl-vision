@@ -1,1 +1,0 @@
--lopengl32 -lglu32 -lprotobuf -lwsock32 -lws2_32 libsslvision.a -lopengl32 -lglu32 -lprotobuf -lwsock32 -lws2_32 C:/msys64/mingw32/lib/libQt5Widgetsd.dll.a C:/msys64/mingw32/lib/libQt5Guid.dll.a C:/msys64/mingw32/lib/libQt5Cored.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
