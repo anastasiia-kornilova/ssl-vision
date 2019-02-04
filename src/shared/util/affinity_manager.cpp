@@ -19,6 +19,9 @@
 */
 //========================================================================
 #include "affinity_manager.h"
+#ifdef __WIN32__
+#  include <processthreadsapi.h>
+#endif
 
 AffinityManager::AffinityManager()
 {
@@ -37,39 +40,44 @@ AffinityManager::~AffinityManager()
 void AffinityManager::demandCore(int core) {
 
   DT_LOCK;
-  unsigned int tid=(long int)syscall(__NR_gettid);
-  printf("The ID of this thread is: %d\n", tid);
-  cpu_set_t cpu_set;
-  //int n = max_cpu_id+1;
-  sched_getaffinity(tid, sizeof(cpu_set), &cpu_set);
-  for (int i=0;i<CPU_SETSIZE;i++) {
-    CPU_CLR(i, &cpu_set);
-  }
-  int max_cores=cores.size();
- 
-
-  if (core < 0) core=0;
-  int modded_core=core % max_cores;
-
-  /* This commented code could be used to set affinity for hyperthreading
-     For now, we leave this up to the system scheduler...
-    int wraps=core/max_cores;
-    if (wraps > 0) {
-      int ht_channel=wraps % cores[modded_core].processor_ids.size();
-    }
-  */
-
-  for (unsigned int i=0; i < cores[modded_core].processor_ids.size(); i++) {
-    CPU_SET(cores[modded_core].processor_ids[i],&cpu_set);
-  }
-  if (sched_setaffinity(tid, sizeof(cpu_set), &cpu_set) == 0) {
-    printf("Affinity set successfully\n");
-    for (int i=0;i<CPU_SETSIZE;i++) {
-      if (CPU_ISSET(i,&cpu_set)) printf("Set CPU: %d\n",i);
-    }
-  } else {
-    printf("Error while setting affinity\n");
-  }	
+//#ifdef __WIN32__
+//  unsigned int tid = GetCurrentThreadId();
+//#else
+//  unsigned int tid=(long int)syscall(__NR_gettid);
+//#endif
+//
+//  printf("The ID of this thread is: %d\n", tid);
+//  cpu_set_t cpu_set;
+//  //int n = max_cpu_id+1;
+//  sched_getaffinity(tid, sizeof(cpu_set), &cpu_set);
+//  for (int i=0;i<CPU_SETSIZE;i++) {
+//    CPU_CLR(i, &cpu_set);
+//  }
+//  int max_cores=cores.size();
+//
+//
+//  if (core < 0) core=0;
+//  int modded_core=core % max_cores;
+//
+//  /* This commented code could be used to set affinity for hyperthreading
+//     For now, we leave this up to the system scheduler...
+//    int wraps=core/max_cores;
+//    if (wraps > 0) {
+//      int ht_channel=wraps % cores[modded_core].processor_ids.size();
+//    }
+//  */
+//
+//  for (unsigned int i=0; i < cores[modded_core].processor_ids.size(); i++) {
+//    CPU_SET(cores[modded_core].processor_ids[i],&cpu_set);
+//  }
+//  if (sched_setaffinity(tid, sizeof(cpu_set), &cpu_set) == 0) {
+//    printf("Affinity set successfully\n");
+//    for (int i=0;i<CPU_SETSIZE;i++) {
+//      if (CPU_ISSET(i,&cpu_set)) printf("Set CPU: %d\n",i);
+//    }
+//  } else {
+//    printf("Error while setting affinity\n");
+//  }
 
   DT_UNLOCK;
 }

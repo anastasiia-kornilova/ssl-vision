@@ -8,16 +8,13 @@
 #else
 # include <sys/socket.h>
 # include <sys/poll.h>
+# include <netdb.h>
 #endif
-
 
 #include <stdio.h>
 #include <sys/types.h>
-
-//#include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
-//#include <QUdpSocket>
 #include "util.h"
 
 #include "netraw.h"

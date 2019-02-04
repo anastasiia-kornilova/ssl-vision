@@ -1,14 +1,17 @@
 #ifndef _INCLUDED_NETRAW_H_
 #define _INCLUDED_NETRAW_H_
+#ifdef __WIN32__
+# include <Winsock2.h>
+#else
+# include <sys/socket.h>
+# include <netinet/in.h>
+# include <arpa/inet.h>
+#endif
 
 #include <sys/types.h>
-//#include <sys/socket.h>
-//#include <netinet/in.h>
-//#include <arpa/inet.h>
-#include <winsock2.h>
 #include <stdio.h>
 #include <string.h>
-//#include <QUdpSocket>
+
 namespace Net{
 
 //====================================================================//
