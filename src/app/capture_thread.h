@@ -21,7 +21,10 @@
 
 #ifndef CAPTURE_THREAD_H
 #define CAPTURE_THREAD_H
+#ifdef __WIN32__
+#else
 #include "capturedc1394v2.h"
+#endif
 #include "capturefromfile.h"
 #ifdef __WIN32__
 #else

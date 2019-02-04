@@ -1,6 +1,7 @@
 #ifndef _INCLUDED_NETRAW_H_
 #define _INCLUDED_NETRAW_H_
 #ifdef __WIN32__
+# define WIN32_LEAN_AND_MEAN
 # include <Winsock2.h>
 #else
 # include <sys/socket.h>
@@ -62,7 +63,19 @@ public:
   unsigned recv_packets;
   unsigned recv_bytes;
 public:
-  UDP() {fd=-1; close();}
+  UDP() {
+      fd=-1;
+      close();
+#ifdef __WIN32__
+      WSADATA wsaData;
+      int iResult;
+      u_long iMode = 0;
+
+      iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+      if (iResult != NO_ERROR)
+          printf("Error at WSAStartup()\n");
+#endif
+  }
   ~UDP() {close();}
 
   bool open(int port = 0, bool share_port_for_multicasting=false, bool multicast_include_localhost=false, bool blocking=false);

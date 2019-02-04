@@ -20,6 +20,7 @@
 //========================================================================
 #ifndef GLLUTWIDGET_H_
 #define GLLUTWIDGET_H_
+# define WIN32_LEAN_AND_MEAN
 #include <QtOpenGL/QGLWidget>
 #include <QTime>
 #include <QMutex>

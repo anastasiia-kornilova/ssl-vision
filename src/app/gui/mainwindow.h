@@ -22,6 +22,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#ifdef __WIN32__
+#define WIN32_LEAN_AND_MEAN
+#endif
+
 #include "affinity_manager.h"
 #include <QtGui>
 #include <qmainwindow.h>
