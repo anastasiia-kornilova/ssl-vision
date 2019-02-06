@@ -33,7 +33,7 @@ CaptureThread::CaptureThread(int cam_id)
   control->addChild( (VarType*) (c_reset  = new VarTrigger("reset bus","Reset")));
   control->addChild( (VarType*) (c_auto_refresh= new VarBool("auto refresh params",true)));
   control->addChild( (VarType*) (c_refresh= new VarTrigger("re-read params","Refresh")));
-  control->addChild( (VarType*) (captureModule= new VarStringEnum("Capture Module","DC 1394")));
+  control->addChild( (VarType*) (captureModule= new VarStringEnum("Capture Module","Read from files")));
   captureModule->addFlags(VARTYPE_FLAG_NOLOAD_ENUM_CHILDREN);
   captureModule->addItem("DC 1394");
   captureModule->addItem("Video 4 Linux");
@@ -55,6 +55,8 @@ CaptureThread::CaptureThread(int cam_id)
   counter=new FrameCounter();
   capture=0;
 #ifdef __WIN32__
+  captureDC1394 = NULL;
+  captureV4L = NULL;
 #else
   captureDC1394 = new CaptureDC1394v2(dc1394,camId);
   captureV4L = new CaptureV4L(v4l,camId);
@@ -102,8 +104,10 @@ VarList * CaptureThread::getSettings() {
 
 CaptureThread::~CaptureThread()
 {
+#ifndef __WIN32__
   delete captureDC1394;
   delete captureV4L;
+#endif
   delete captureFiles;
   delete captureGenerator;
   delete counter;
