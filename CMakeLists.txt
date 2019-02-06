@@ -17,12 +17,15 @@ else()
 endif()
 
 #defines
-add_definitions(-D UNIX)
-add_definitions(-D LINUX)
-add_definitions(-D _GNU_SOURCE)
+if (UNIX)
+	add_definitions(-D UNIX)
+	add_definitions(-D LINUX)
+	add_definitions(-D _GNU_SOURCE)
+endif()
+
 add_definitions(-std=c++11)
 
-add_definitions(-w)
+add_definitions(-w) # for testing without warnings
 
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
@@ -42,7 +45,9 @@ endif()
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Eigen3 REQUIRED eigen3)
-#pkg_check_modules(DC1394 REQUIRED libdc1394-2)
+if (UNIX)
+	pkg_check_modules(DC1394 REQUIRED libdc1394-2)
+endif()
 
 if(USE_QT5)
 	set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -268,9 +273,13 @@ set (libs ${QT_LIBRARIES}
 	${PYLON5_LIBRARIES}
 	${OpenCV_LIBS}
 	${FLYCAP_LIBS}
-	wsock32 #win only
-	ws2_32	#win only
 )
+
+if (WIN32)
+	list(APPEND libs "wsock32")
+	list(APPEND libs "ws2_32")
+endif()
+
 target_link_libraries(sslvision ${libs})
 if(USE_QT5)
 	qt5_use_modules(sslvision Widgets)
