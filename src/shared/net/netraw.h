@@ -19,7 +19,9 @@ namespace Net{
 //  Net::Address: Network address class
 //  (C) James Bruce
 //====================================================================//
-typedef int socklen_t;
+#ifdef __WIN32__
+    typedef int socklen_t;
+#endif
 class Address {
   sockaddr addr;
   socklen_t addr_len;
@@ -42,9 +44,11 @@ public:
     {memset(&addr,0,sizeof(addr)); addr_len=0;}
   void clear()
     {reset();}
-
+#ifdef __WIN32__
   u_long getInAddr() const;
-
+#else
+  in_addr_t getInAddr() const;
+#endif
   void print(FILE *out = stdout) const;
 
   friend class UDP;
