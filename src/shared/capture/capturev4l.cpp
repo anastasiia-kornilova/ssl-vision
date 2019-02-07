@@ -49,7 +49,7 @@
 //==================================================================
 
 
-//#include "capturev4l.h"
+#include "capturev4l.h"
 #include "conversions.h"
 
 #include <sys/ioctl.h>

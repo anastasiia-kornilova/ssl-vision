@@ -27,8 +27,8 @@
 #include <stdlib.h>
 #include <string>
 #include "VarTypes.h"
-//#include <dc1394/control.h>
-//#include <dc1394/conversions.h>
+#include <dc1394/control.h>
+#include <dc1394/conversions.h>
 
 //#include "conversions.h"
 #ifndef VDATA_NO_QT
