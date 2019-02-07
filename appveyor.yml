@@ -1,0 +1,30 @@
+clone_folder: C:\ssl-vision
+shallow_clone: true
+
+environment:
+  global:
+    MSYS_DIR: C:\msys64
+  matrix:
+    - platform: x86
+      platform_name: i686
+      bit: 32
+    - platform: x64
+      platform_name: x86_64
+      bit: 64     
+
+init:
+  - set PATH=%PATH%;%MSYS_DIR%\usr\bin
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-gcc
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-make
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-qt5
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-protobuf
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-pkg-config
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-eigen3
+  
+build_script:
+  - set PATH=%MSYS_DIR%\mingw%bit%\bin;%PATH%;
+  - mkdir C:\build_mingw_%platform%
+  - cd C:\build_mingw_%platform%
+  - cmake.exe C:\ssl-vision\CMakeLists.txt -DCMAKE_BUILD_TYPE=Debug "MSYS_DIR=%MSYS_DIR%" 
+  - mingw32-make.exe vision
+  - mingw32-make.exe -j4
