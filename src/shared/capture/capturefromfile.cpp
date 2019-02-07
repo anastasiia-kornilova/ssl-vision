@@ -180,8 +180,6 @@ bool CaptureFromFile::copyAndConvertFrame(const RawImage & src, RawImage & targe
   }
   else if (src_fmt == COLOR_RGB8 && output_fmt == COLOR_YUV422_UYVY)
   {
-    //cout << "src = RGB8, dest = UYVY\n";
-    cout << "width = " << src.getWidth() << "; height = " << src.getHeight() << endl;
     if (src.getData() != 0)
 #ifdef __WIN32__
       Conversions::rgb2uyvy(src.getData(), target.getData(), src.getWidth(), src.getHeight());
