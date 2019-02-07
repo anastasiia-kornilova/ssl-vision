@@ -25,6 +25,6 @@ build_script:
   - set PATH=%MSYS_DIR%\mingw%bit%\bin;%PATH%;
   - mkdir C:\build_mingw_%platform%
   - cd C:\build_mingw_%platform%
-  - cmake.exe C:\ssl-vision\CMakeLists.txt -DCMAKE_BUILD_TYPE=Debug "MSYS_DIR=%MSYS_DIR%" 
+  - cmake.exe C:\ssl-vision\CMakeLists.txt -DCMAKE_BUILD_TYPE=Debug
   - mingw32-make.exe vision
   - mingw32-make.exe -j4
