@@ -4,8 +4,8 @@ shallow_clone: true
 environment:
   global:
     MSYS_DIR: C:\msys64
-    CC: %MSYS_DIR%\usr\bin\gcc
-    CXX: %MSYS_DIR%\usr\bin\g++
+    CC: C:\msys64\usr\bin\gcc
+    CXX: C:\msys64\usr\bin\g++
   matrix:
     - platform: x86
       platform_name: i686
