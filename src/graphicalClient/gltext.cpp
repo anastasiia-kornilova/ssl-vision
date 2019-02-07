@@ -230,11 +230,26 @@ void GLText::initializeGlyph(char ch)
   }
   
   GLUtesselator* tess = gluNewTess();
+
+#ifdef __WIN32__
+#ifndef GLAPIENTRYP
+#define GLAPIENTRYP GLAPIENTRY *
+#endif
+
+#ifndef GLAPIENTRY
+#if defined(_MSC_VER) || defined(__MINGW32__)
+#define GLAPIENTRY __stdcall
+#else
+#define GLAPIENTRY
+#endif
+#endif
+  typedef void (GLAPIENTRYP _GLUfuncptr)();
+#endif
   gluTessCallback(tess, GLU_TESS_BEGIN, (_GLUfuncptr) tessBeginCB);
   gluTessCallback(tess, GLU_TESS_END, (_GLUfuncptr) tessEndCB);
   gluTessCallback(tess, GLU_TESS_ERROR, (_GLUfuncptr) tessErrorCB);
   gluTessCallback(tess, GLU_TESS_VERTEX, (_GLUfuncptr) tessVertexCB);
-  
+
   glMatrixMode(GL_MODELVIEW);
   glPushMatrix();
   glLoadIdentity();

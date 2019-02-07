@@ -18,7 +18,9 @@
 \author  Joydeep Biswas (C) 2011
 */
 //========================================================================
-
+#ifdef __WIN32__
+  #define WIN32_LEAN_AND_MEAN
+#endif
 #include <stdio.h>
 #include <QtGui>
 #include <QApplication>
