@@ -27,10 +27,10 @@
 #include <unistd.h>
 
 #ifdef __WIN32__
-# include <unistd.h>
+  #include <unistd.h>
 #else
-# include <syscall.h>
-# include <asm/unistd.h>
+  #include <syscall.h>
+  #include <asm/unistd.h>
 #endif
 
 #include <sched.h>

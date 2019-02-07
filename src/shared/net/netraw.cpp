@@ -1,14 +1,14 @@
 #ifdef __WIN32__
-#include <w32api.h>
-#define _WIN32_WINNT WindowsVista
-# include <Winsock2.h>
-# define WIN32_LEAN_AND_MEAN
-# include <windows.h>
-# include <ws2tcpip.h>
+  #include <w32api.h>
+  #define _WIN32_WINNT WindowsVista
+  #include <Winsock2.h>
+  #define WIN32_LEAN_AND_MEAN
+  #include <windows.h>
+  #include <ws2tcpip.h>
 #else
-# include <sys/socket.h>
-# include <sys/poll.h>
-# include <netdb.h>
+  #include <sys/socket.h>
+  #include <sys/poll.h>
+  #include <netdb.h>
 #endif
 
 #include <stdio.h>
@@ -99,9 +99,7 @@ void Address::print(FILE *out) const
 bool UDP::open(int port, bool share_port_for_multicasting, bool multicast_include_localhost, bool blocking)
 {
   const int TTL = 32;
-//  udpSocket = new QUdpSocket(this);
-//  udpSocket->bind(QHostAddress::LocalHost, port);
-//  connect(udpSocket, SIGNAL(readyRead()), this, SLOT(readPendingDatagrams()));
+
   // open the socket
   if(fd >= 0) ::close(fd);
   fd = socket(PF_INET, SOCK_DGRAM, 0);

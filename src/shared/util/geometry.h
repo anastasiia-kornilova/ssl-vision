@@ -32,7 +32,7 @@
 #include "gvector.h"
 #include "geomalgo.h"
 #ifdef __WIN32__
-# include <stdint.h>
+  #include <stdint.h>
 #endif
 
 typedef GVector::vector2d<double> vector2d;

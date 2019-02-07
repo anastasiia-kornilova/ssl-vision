@@ -173,9 +173,9 @@ void Conversions::rgb2uyvy (unsigned char *src, unsigned char *dest, int width, 
                            DC1394_COLOR_CODING_RGB8, 8);
 #else
     
-    int NumPixels = width*height*3/2;
+    int NumPixels = width*height;
     
-    register int max_i = ( NumPixels << 1 )-1;
+    register int max_i = ( NumPixels*3 << 2 )-1;
     //register int max_j = NumPixels + ( NumPixels << 1 ) -1;
     register int i = 0;
     register int j = 0;

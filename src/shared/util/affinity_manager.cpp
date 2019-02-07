@@ -20,7 +20,7 @@
 //========================================================================
 #include "affinity_manager.h"
 #ifdef __WIN32__
-#  include <processthreadsapi.h>
+  #include <processthreadsapi.h>
 #endif
 
 AffinityManager::AffinityManager()

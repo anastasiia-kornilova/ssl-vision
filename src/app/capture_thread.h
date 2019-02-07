@@ -21,15 +21,11 @@
 
 #ifndef CAPTURE_THREAD_H
 #define CAPTURE_THREAD_H
-#ifdef __WIN32__
-#else
-#include "capturedc1394v2.h"
+#ifndef __WIN32__
+  #include "capturedc1394v2.h"
+  #include "capturev4l.h"
 #endif
 #include "capturefromfile.h"
-#ifdef __WIN32__
-#else
-# include "capturev4l.h"
-#endif
 #include "capture_generator.h"
 #include <QThread>
 #include "ringbuffer.h"

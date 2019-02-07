@@ -64,7 +64,6 @@ CaptureThread::CaptureThread(int cam_id)
   captureFiles = new CaptureFromFile(fromfile, camId);
   captureGenerator = new CaptureGenerator(generator);
 
-
 #ifdef PYLON5
   captureModule->addItem("Basler GigE");
   settings->addChild( (VarType*) (basler = new VarList("Basler GigE")));
