@@ -178,18 +178,28 @@ bool CaptureFromFile::copyAndConvertFrame(const RawImage & src, RawImage & targe
     if (src.getData() != 0)
       memcpy(target.getData(),src.getData(),src.getNumBytes());
   }
-  //else if (src_fmt == COLOR_RGB8 && output_fmt == COLOR_YUV422_UYVY)
- // {
-   // if (src.getData() != 0)
-     // dc1394_convert_to_YUV422(src.getData(), target.getData(), src.getWidth(), src.getHeight(),
-     //                          DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_RGB8, 8);
- // }
- // else if (src_fmt == COLOR_YUV422_UYVY && output_fmt == COLOR_RGB8)
- // {
- //   if (src.getData() != 0)
-//      dc1394_convert_to_RGB8(src.getData(),target.getData(), src.getWidth(), src.getHeight(),
-        //                     DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_YUV422, 8);
- // }
+  else if (src_fmt == COLOR_RGB8 && output_fmt == COLOR_YUV422_UYVY)
+  {
+    //cout << "src = RGB8, dest = UYVY\n";
+    cout << "width = " << src.getWidth() << "; height = " << src.getHeight() << endl;
+    if (src.getData() != 0)
+#ifdef __WIN32__
+      Conversions::rgb2uyvy(src.getData(), target.getData(), src.getWidth(), src.getHeight());
+#else
+      dc1394_convert_to_YUV422(src.getData(), target.getData(), src.getWidth(), src.getHeight(),
+                               DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_RGB8, 8);
+#endif
+  }
+  else if (src_fmt == COLOR_YUV422_UYVY && output_fmt == COLOR_RGB8)
+  {
+    if (src.getData() != 0)
+#ifdef __WIN32__
+      Conversions::uyvy2rgb(src.getData(),target.getData(), src.getWidth(), src.getHeight());
+#else
+      dc1394_convert_to_RGB8(src.getData(),target.getData(), src.getWidth(), src.getHeight(),
+                             DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_YUV422, 8);
+#endif
+  }
   else 
   {
     fprintf(stderr,"Cannot copy and convert frame...unknown conversion selected from: %s to %s\n",
