@@ -35,14 +35,23 @@ CaptureThread::CaptureThread(int cam_id)
   control->addChild( (VarType*) (c_refresh= new VarTrigger("re-read params","Refresh")));
   control->addChild( (VarType*) (captureModule= new VarStringEnum("Capture Module","Read from files")));
   captureModule->addFlags(VARTYPE_FLAG_NOLOAD_ENUM_CHILDREN);
+#ifndef __WIN32__
   captureModule->addItem("DC 1394");
   captureModule->addItem("Video 4 Linux");
+#endif
   captureModule->addItem("Read from files");
   captureModule->addItem("Generator");
+#ifdef __WIN32__
+  captureModule->addItem("Capture from USB webcam");
+#else
   settings->addChild( (VarType*) (dc1394 = new VarList("DC1394")));
   settings->addChild( (VarType*) (v4l = new VarList("Video 4 Linux")));
+#endif
   settings->addChild( (VarType*) (fromfile = new VarList("Read from files")));
   settings->addChild( (VarType*) (generator = new VarList("Generator")));
+#ifdef __WIN32__
+  settings->addChild( (VarType*) (opencv = new VarList("OpenCV")));
+#endif
   settings->addFlags( VARTYPE_FLAG_AUTO_EXPAND_TREE );
   c_stop->addFlags( VARTYPE_FLAG_READONLY );
   c_refresh->addFlags( VARTYPE_FLAG_READONLY );
@@ -57,6 +66,7 @@ CaptureThread::CaptureThread(int cam_id)
 #ifdef __WIN32__
   captureDC1394 = NULL;
   captureV4L = NULL;
+  captureOpenCv = new CaptureOpenCv(opencv);
 #else
   captureDC1394 = new CaptureDC1394v2(dc1394,camId);
   captureV4L = new CaptureV4L(v4l,camId);
@@ -106,6 +116,8 @@ CaptureThread::~CaptureThread()
 #ifndef __WIN32__
   delete captureDC1394;
   delete captureV4L;
+#else
+  delete captureOpenCv;
 #endif
   delete captureFiles;
   delete captureGenerator;
@@ -147,6 +159,10 @@ void CaptureThread::selectCaptureMethod() {
 #ifdef MVIMPACT
   } else if(captureModule->getString() == "BlueFox2") {
     new_capture = captureBlueFox2;
+#endif
+#ifdef __WIN32__
+  } else if(captureModule->getString() == "Capture from USB webcam") {
+    new_capture = captureOpenCv;
 #endif
   } else if(captureModule->getString() == "Video 4 Linux") {
     new_capture = captureV4L;

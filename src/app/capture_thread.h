@@ -24,6 +24,8 @@
 #ifndef __WIN32__
   #include "capturedc1394v2.h"
   #include "capturev4l.h"
+#else
+  #include "captureopencv.h"
 #endif
 #include "capturefromfile.h"
 #include "capture_generator.h"
@@ -61,12 +63,16 @@ protected:
   VisionStack * stack;
   FrameCounter * counter;
   CaptureInterface * capture;
+
   CaptureInterface * captureDC1394;
   CaptureInterface * captureV4L;
   CaptureInterface * captureBlueFox2;
   CaptureInterface * captureFlycap;
   CaptureInterface * captureFiles;
   CaptureInterface * captureGenerator;
+#ifdef __WIN32__
+  CaptureInterface * captureOpenCv;
+#endif
   CaptureInterface * captureBasler;
   AffinityManager * affinity;
   FrameBuffer * rb;
@@ -79,6 +85,9 @@ protected:
   VarList * flycap;
   VarList * generator;
   VarList * fromfile;
+#ifdef __WIN32__
+  VarList * opencv;
+#endif
   VarList * basler;
   VarList * control;
   VarTrigger * c_start;

@@ -175,7 +175,7 @@ void Conversions::rgb2uyvy (unsigned char *src, unsigned char *dest, int width, 
     
     int NumPixels = width*height;
     
-    register int max_i = ( NumPixels*3 << 2 )-1;
+    register int max_i = (NumPixels*3)-1;
     //register int max_j = NumPixels + ( NumPixels << 1 ) -1;
     register int i = 0;
     register int j = 0;

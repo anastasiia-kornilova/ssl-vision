@@ -43,7 +43,9 @@
 #include "robocup_ssl_server.h"
 
 #ifdef OPENCV
-#include "plugin_neuralcolorcalib.h"
+  #ifndef __WIN32__
+    #include "plugin_neuralcolorcalib.h"
+  #endif
 #endif
 
 using namespace std;
