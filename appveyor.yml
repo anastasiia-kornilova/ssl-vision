@@ -26,7 +26,7 @@ build_script:
   - echo %PATH%
   - protoc.exe --version
   - dir %MSYS_DIR%\mingw%bit%\lib
-  #- mkdir C:\build_mingw_%platform%
-  #- cd C:\build_mingw_%platform%
-  #- cmake.exe C:\ssl-vision
-  #- cmake.exe --build . -j 4
+  - mkdir C:\build_mingw_%platform%
+  - cd C:\build_mingw_%platform%
+  - cmake.exe C:\ssl-vision
+  - cmake.exe --build . -j 4
