@@ -4,8 +4,6 @@ shallow_clone: true
 environment:
   global:
     MSYS_DIR: C:\msys64
-    CC: C:\msys64\usr\bin\gcc
-    CXX: C:\msys64\usr\bin\g++
   matrix:
     - platform: x86
       platform_name: i686
@@ -27,6 +25,5 @@ build_script:
   - set PATH=%MSYS_DIR%\mingw%bit%\bin;%PATH%;
   - mkdir C:\build_mingw_%platform%
   - cd C:\build_mingw_%platform%
-  - cmake.exe C:\ssl-vision\CMakeLists.txt -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles"
-  - mingw32-make.exe vision
-  - mingw32-make.exe -j4
+  - cmake.exe C:\ssl-vision
+  - cmake.exe --build . --target ssl-vision -j 4
