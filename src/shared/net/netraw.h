@@ -1,7 +1,6 @@
 #ifndef _INCLUDED_NETRAW_H_
 #define _INCLUDED_NETRAW_H_
 #ifdef __WIN32__
-  #define WIN32_LEAN_AND_MEAN
   #include <Winsock2.h>
 #else
   #include <sys/socket.h>

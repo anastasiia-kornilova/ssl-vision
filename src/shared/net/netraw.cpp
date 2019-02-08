@@ -2,8 +2,6 @@
   #include <w32api.h>
   #define _WIN32_WINNT WindowsVista
   #include <Winsock2.h>
-  #define WIN32_LEAN_AND_MEAN
-  #include <windows.h>
   #include <ws2tcpip.h>
 #else
   #include <sys/socket.h>

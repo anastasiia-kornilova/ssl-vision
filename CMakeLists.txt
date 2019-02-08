@@ -49,6 +49,10 @@ if (UNIX)
 	pkg_check_modules(DC1394 REQUIRED libdc1394-2)
 endif()
 
+if(WIN32)
+	add_definitions(-D WIN32_LEAN_AND_MEAN)
+endif()
+
 if(USE_QT5)
 	set(CMAKE_INCLUDE_CURRENT_DIR ON)
 	set(CMAKE_AUTOMOC ON)
