@@ -40,12 +40,8 @@ AffinityManager::~AffinityManager()
 void AffinityManager::demandCore(int core) {
 
   DT_LOCK;
-#ifdef __WIN32__
-  unsigned int tid = GetCurrentThreadId();
-#else
-  unsigned int tid=(long int)syscall(__NR_gettid);
-#endif
 #ifndef __WIN32__
+  unsigned int tid=(long int)syscall(__NR_gettid);
   printf("The ID of this thread is: %d\n", tid);
   cpu_set_t cpu_set;
   //int n = max_cpu_id+1;
