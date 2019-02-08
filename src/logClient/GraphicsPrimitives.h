@@ -23,6 +23,9 @@
 #ifndef GRAPHICS_PRIMITIVES_H
 #define GRAPHICS_PRIMITIVES_H
 
+#ifdef __WIN32__
+  #define WIN32_LEAN_AND_MEAN
+#endif
 #include <QGraphicsItem>
 #include <QGraphicsPathItem>
 #include <QVector>
