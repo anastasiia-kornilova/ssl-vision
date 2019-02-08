@@ -29,5 +29,5 @@ build_script:
   - dir %MSYS_DIR%\mingw%bit%\lib
   - mkdir C:\build_mingw_%platform%
   - cd C:\build_mingw_%platform%
-  - cmake.exe C:\ssl-vision
+  - cmake.exe -G "MinGW Makefiles" C:\ssl-vision
   - cmake.exe --build . -j 4
