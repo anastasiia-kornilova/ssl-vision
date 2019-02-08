@@ -256,7 +256,7 @@ RawImage CaptureBasler::getFrame() {
 		memcpy(buf, capture.GetBuffer(), capture.GetImageSize());
 		img.setData(buf);
 
-#ifdef OPENCV
+#ifdef OPENCV2
 		// gaussianBlur(img);
         // contrast(img, 1.6);
         // sharpen(img);
@@ -414,7 +414,7 @@ void CaptureBasler::writeParameterValues(VarList* vars) {
 	//}
 }
 
-#ifdef OPENCV
+#ifdef OPENCV2
 inline void CaptureBasler::gaussianBlur(RawImage& img) {
 	cv::Mat cv_img(img.getHeight(), img.getWidth(), CV_8UC3, img.getData());
 	cv::GaussianBlur(cv_img, cv_img, cv::Size(), blur_sigma);

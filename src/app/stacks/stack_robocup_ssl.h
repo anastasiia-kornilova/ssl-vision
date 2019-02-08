@@ -42,10 +42,8 @@
 #include "cmpattern_teamdetector.h"
 #include "robocup_ssl_server.h"
 
-#ifdef OPENCV
-  #ifndef __WIN32__
-    #include "plugin_neuralcolorcalib.h"
-  #endif
+#ifdef OPENCV2
+  #include "plugin_neuralcolorcalib.h"
 #endif
 
 using namespace std;

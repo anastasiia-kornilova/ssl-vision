@@ -28,8 +28,12 @@
 #include "visionplugin.h"
 #include "lut3d.h"
 #include "neurowidget.h"
-#include "opencv/ml.h" //OpenCV Machine Learning functions
-
+#ifdef OPENCV2
+  #include "opencv/ml.h" //OpenCV Machine Learning functions
+#endif
+#ifdef OPENCV3
+  #include "opencv2/ml.hpp" //OpenCV Machine Learning functions
+#endif
 
 class PluginNeuralColorCalib : public VisionPlugin {
 protected:
@@ -39,7 +43,11 @@ protected:
     LUTChannelMode mode;
     bool continuing_undo;
 
-    CvANN_MLP * neuronet; //Creation of the ANN object (OpenCV)
+#ifdef OPENCV2
+    CvANN_MLP * neuronet; //Creation of the ANN object (OpenCV v.2)
+#else
+    cv::ml::ANN_MLP * neuronet; //Creation of the ANN object (OpenCV v.3+)
+#endif
     //variables used by OpenCV algorithm RunNeuralopenCV
     CvMat *realinput;
     CvMat *netout;

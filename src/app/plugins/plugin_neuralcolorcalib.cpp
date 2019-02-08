@@ -22,7 +22,12 @@
 #include <QStackedWidget>
 #include <cmath>
 #include "opencv/cxcore.h"
-#include "opencv/ml.h" //OpenCV Machine Learning functions
+#ifdef OPENCV2
+  #include "opencv/ml.h" //OpenCV Machine Learning functions
+#endif
+#ifdef OPENCV3
+  #include "opencv2/ml.hpp" //OpenCV Machine Learning functions
+#endif
 
 const int sizeInputLayer = 3; //Number of neurons on the input layer. 3 because each example has Y, U and V values
 const int sizeHidLayer = 20; //Number of neurons on the hidden layer
@@ -30,7 +35,7 @@ const int sizeOutLayer = 10; //Number of neurons on the output layer (also numbe
 
 
 int PluginNeuralColorCalib::TrainNeuralopenCV() {
-    CvANN_MLP_TrainParams netparams;
+    CvANN_MLP_TrainParams netparams; //TODO find way to do it with OpenCV v.3+
     CvTermCriteria term_crit;
     double * training;
     training= new double [n_samples * sizeInputLayer * sizeInputLayer];

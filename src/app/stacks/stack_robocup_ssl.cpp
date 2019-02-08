@@ -57,10 +57,8 @@ StackRoboCupSSL::StackRoboCupSSL(
   stack.push_back(new PluginDVR(_fb));
 
   stack.push_back(new PluginColorCalibration(_fb,lut_yuv, LUTChannelMode_Numeric));
-#ifdef OPENCV
-  #ifndef __WIN32__
-    stack.push_back(new PluginNeuralColorCalib(_fb,lut_yuv, LUTChannelMode_Numeric));
-  #endif
+#ifdef OPENCV2
+  stack.push_back(new PluginNeuralColorCalib(_fb,lut_yuv, LUTChannelMode_Numeric));
 #endif
   settings->addChild(lut_yuv->getSettings());
 

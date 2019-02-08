@@ -21,6 +21,7 @@ init:
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-protobuf
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-eigen3
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-cmake
+  - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-opencv
   
 build_script:
   - set PATH=%MSYS_DIR%\mingw%bit%\bin;%QT_MinGW_DIR%\bin
