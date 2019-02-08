@@ -22,7 +22,7 @@ init:
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-eigen3
   
 build_script:
-  - set PATH=%MSYS_DIR%\mingw%bit%\bin;%PATH%;
+  - set PATH=%MSYS_DIR%\mingw%bit%\bin;%MSYS_DIR%\mingw%bit%\lib;%PATH%;
   - mkdir C:\build_mingw_%platform%
   - cd C:\build_mingw_%platform%
   - cmake.exe C:\ssl-vision
