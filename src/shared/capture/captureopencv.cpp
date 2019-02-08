@@ -16,6 +16,7 @@ CaptureOpenCv::CaptureOpenCv(VarList * _settings) : CaptureInterface(_settings)
     settings->addChild(mCaptureSettings);
 
     mIndex = new VarString("Camera index");
+    mIndex->setString("0");
     mCaptureSettings->addChild(mIndex);
 }
 
