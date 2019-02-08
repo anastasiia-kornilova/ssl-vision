@@ -26,4 +26,4 @@ build_script:
   - mkdir C:\build_mingw_%platform%
   - cd C:\build_mingw_%platform%
   - cmake.exe C:\ssl-vision
-  - cmake.exe --build . --target ssl-vision -j 4
+  - cmake.exe --build . -j 4
