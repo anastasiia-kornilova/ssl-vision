@@ -49,8 +49,13 @@ protected:
     cv::ml::ANN_MLP * neuronet; //Creation of the ANN object (OpenCV v.3+)
 #endif
     //variables used by OpenCV algorithm RunNeuralopenCV
+#ifdef OPENCV2
     CvMat *realinput;
     CvMat *netout;
+#else
+    cv::_InputArray realinput;
+    cv::_OutputArray netout;
+#endif
     std::vector<double> * neuro_trainingset; //size of training set.
     std::vector<double> * neuro_targset; //size of target set (outputs of the training set)
 

@@ -35,21 +35,22 @@ CaptureThread::CaptureThread(int cam_id)
   control->addChild( (VarType*) (c_refresh= new VarTrigger("re-read params","Refresh")));
   control->addChild( (VarType*) (captureModule= new VarStringEnum("Capture Module","Read from files")));
   captureModule->addFlags(VARTYPE_FLAG_NOLOAD_ENUM_CHILDREN);
-#ifndef __WIN32__
+#ifdef UNIX
   captureModule->addItem("DC 1394");
   captureModule->addItem("Video 4 Linux");
 #endif
   captureModule->addItem("Read from files");
   captureModule->addItem("Generator");
-#ifdef __WIN32__
+#ifdef OPENCV3
   captureModule->addItem("Capture from USB webcam");
-#else
+#endif
+#ifdef UNIX
   settings->addChild( (VarType*) (dc1394 = new VarList("DC1394")));
   settings->addChild( (VarType*) (v4l = new VarList("Video 4 Linux")));
 #endif
   settings->addChild( (VarType*) (fromfile = new VarList("Read from files")));
   settings->addChild( (VarType*) (generator = new VarList("Generator")));
-#ifdef __WIN32__
+#ifdef OPENCV3
   settings->addChild( (VarType*) (opencv = new VarList("OpenCV")));
 #endif
   settings->addFlags( VARTYPE_FLAG_AUTO_EXPAND_TREE );
@@ -63,13 +64,16 @@ CaptureThread::CaptureThread(int cam_id)
   stack = 0;
   counter=new FrameCounter();
   capture=0;
-#ifdef __WIN32__
+#ifndef UNIX
   captureDC1394 = NULL;
   captureV4L = NULL;
-  captureOpenCv = new CaptureOpenCv(opencv);
 #else
   captureDC1394 = new CaptureDC1394v2(dc1394,camId);
   captureV4L = new CaptureV4L(v4l,camId);
+#endif
+
+#ifdef OPENCV3
+    captureOpenCv = new CaptureOpenCv(opencv);
 #endif
   captureFiles = new CaptureFromFile(fromfile, camId);
   captureGenerator = new CaptureGenerator(generator);
@@ -113,10 +117,11 @@ VarList * CaptureThread::getSettings() {
 
 CaptureThread::~CaptureThread()
 {
-#ifndef __WIN32__
+#ifdef UNIX
   delete captureDC1394;
   delete captureV4L;
-#else
+#endif
+#ifdef OPENCV3
   delete captureOpenCv;
 #endif
   delete captureFiles;
@@ -160,7 +165,7 @@ void CaptureThread::selectCaptureMethod() {
   } else if(captureModule->getString() == "BlueFox2") {
     new_capture = captureBlueFox2;
 #endif
-#ifdef __WIN32__
+#ifdef OPENCV3
   } else if(captureModule->getString() == "Capture from USB webcam") {
     new_capture = captureOpenCv;
 #endif

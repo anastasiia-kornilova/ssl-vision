@@ -97,8 +97,6 @@ set (SHARED_SRCS
 if (UNIX)
     list(APPEND SHARED_SRCS ${shared_dir}/capture/capturedc1394v2.cpp)
     list(APPEND SHARED_SRCS ${shared_dir}/capture/capturev4l.cpp)
-else()
-    list(APPEND SHARED_SRCS ${shared_dir}/capture/captureopencv.cpp)
 endif()
 
 #only ones that need to be moc'ed
@@ -136,8 +134,6 @@ set (SHARED_HEADERS
 if (UNIX)
     list(APPEND SHARED_HEADERS ${shared_dir}/capture/capturedc1394v2.h)
     list(APPEND SHARED_HEADERS ${shared_dir}/capture/capturev4l.h)
-else()
-    list(APPEND SHARED_HEADERS ${shared_dir}/capture/captureopencv.h)
 endif()
 
 set (SHARED_RC
