@@ -53,8 +53,8 @@ protected:
     CvMat *realinput;
     CvMat *netout;
 #else
-    cv::_InputArray realinput;
-    cv::_OutputArray netout;
+    cv::Mat& realinput;
+    cv::Mat& netout;
 #endif
     std::vector<double> * neuro_trainingset; //size of training set.
     std::vector<double> * neuro_targset; //size of target set (outputs of the training set)

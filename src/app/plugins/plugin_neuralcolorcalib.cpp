@@ -49,8 +49,8 @@ int PluginNeuralColorCalib::TrainNeuralopenCV() {
     CvMat trainin;
     CvMat trainout;
 #else
-    cv::InputArray trainin = cv::_InputArray::_InputArray(cv::Mat(n_samples,3,CV_64F,training));
-    cv::InputArray trainout = cv::_InputArray::_InputArray(cv::Mat(n_samples,sizeOutLayer,CV_64F,target));
+    cv::Mat trainin = cv::Mat(n_samples,3,CV_64F,training);
+    cv::Mat trainout = cv::Mat(n_samples,sizeOutLayer,CV_64F,target);
 #endif
     int interactions_ran=0;
 #ifdef OPENCV2
@@ -98,12 +98,16 @@ int PluginNeuralColorCalib::RunNeuralopenCV(double *input) {
 #ifdef OPENCV2
             cvSetData(realinput,input,sizeof(double)*3); //inserts the input into the OpenCV matrix format
 #else
-            realinput = cv::_InputArray::_InputArray(cv::Mat::Mat(sizeof(*input) / 3, 3, CV_64F, input));
+            realinput = cv::Mat::Mat(sizeof(*input) / 3, 3, CV_64F, input);
 #endif
-            neuronet->predict (realinput,netout); //call prediction (ask the output) of the object for a given input.
+            neuronet->predict (cv::_InputArray::_InputArray(realinput),cv::_OutputArray::_OutputArray(netout)); //call prediction (ask the output) of the object for a given input.
 
             for (int j=0; j<sizeOutLayer; j++){ //inserts the output in an output array
+#ifdef OPENCV2
                 tmpout=CV_MAT_ELEM(*netout,double,0,j);  //TODO find way to do it with OpenCV v.3+
+#else
+                tmpout = netout.at<double>(0, j);
+#endif
                 if  (tmpout > maxout){
                     noutput=j;
                     maxout=tmpout;
@@ -140,8 +144,8 @@ PluginNeuralColorCalib::PluginNeuralColorCalib(FrameBuffer * _buffer, YUVLUT * _
     neuronet->setLayerSizes(layer_sizes);
     neuronet->setActivationFunction(cv::ml::ANN_MLP::SIGMOID_SYM, 1, 1);
     //variables used by OpenCV algorithm RunNeuralopenCV
-    realinput = cv::_InputArray::_InputArray(cv::Mat(1,3,CV_64F));
-    netout = cv::_OutputArray::_OutputArray(cv::Mat(1,sizeOutLayer,CV_64F));
+    realinput = cv::Mat(1,3,CV_64F);
+    netout = cv::Mat(1,sizeOutLayer,CV_64F);
 #endif
     //
 
