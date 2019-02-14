@@ -24,7 +24,8 @@
 #ifndef __WIN32__
   #include "capturedc1394v2.h"
   #include "capturev4l.h"
-#else
+#endif
+#ifdef OPENCV3
   #include "captureopencv.h"
 #endif
 #include "capturefromfile.h"
