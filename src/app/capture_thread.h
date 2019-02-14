@@ -21,7 +21,7 @@
 
 #ifndef CAPTURE_THREAD_H
 #define CAPTURE_THREAD_H
-#ifndef __WIN32__
+#ifdef UNIX
   #include "capturedc1394v2.h"
   #include "capturev4l.h"
 #endif
@@ -71,7 +71,7 @@ protected:
   CaptureInterface * captureFlycap;
   CaptureInterface * captureFiles;
   CaptureInterface * captureGenerator;
-#ifdef __WIN32__
+#ifdef OPENCV3
   CaptureInterface * captureOpenCv;
 #endif
   CaptureInterface * captureBasler;
@@ -86,7 +86,7 @@ protected:
   VarList * flycap;
   VarList * generator;
   VarList * fromfile;
-#ifdef __WIN32__
+#ifdef OPENCV3
   VarList * opencv;
 #endif
   VarList * basler;
