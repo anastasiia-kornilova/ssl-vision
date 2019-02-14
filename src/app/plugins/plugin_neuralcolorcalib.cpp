@@ -97,14 +97,14 @@ int PluginNeuralColorCalib::RunNeuralopenCV(double *input) {
     if (isNetSet){ //if network is not trained do nothing
 #ifdef OPENCV2
             cvSetData(realinput,input,sizeof(double)*3); //inserts the input into the OpenCV matrix format
+            neuronet->predict (realinput,netout); //call prediction (ask the output) of the object for a given input.
 #else
             realinput = new cv::Mat(sizeof(*input) / 3, 3, CV_64F, input);
-#endif
             neuronet->predict (*(new cv::_InputArray(*realinput)), *(new cv::_OutputArray(*netout))); //call prediction (ask the output) of the object for a given input.
-
+#endif
             for (int j=0; j<sizeOutLayer; j++){ //inserts the output in an output array
 #ifdef OPENCV2
-                tmpout=CV_MAT_ELEM(*netout,double,0,j);  //TODO find way to do it with OpenCV v.3+
+                tmpout=CV_MAT_ELEM(*netout,double,0,j);
 #else
                 tmpout = netout->at<double>(0, j);
 #endif
