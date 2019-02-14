@@ -98,15 +98,15 @@ int PluginNeuralColorCalib::RunNeuralopenCV(double *input) {
 #ifdef OPENCV2
             cvSetData(realinput,input,sizeof(double)*3); //inserts the input into the OpenCV matrix format
 #else
-            realinput = cv::Mat::Mat(sizeof(*input) / 3, 3, CV_64F, input);
+            realinput = new cv::Mat(sizeof(*input) / 3, 3, CV_64F, input);
 #endif
-            neuronet->predict (cv::_InputArray::_InputArray(realinput),cv::_OutputArray::_OutputArray(netout)); //call prediction (ask the output) of the object for a given input.
+            neuronet->predict (*(new cv::_InputArray(*realinput)), *(new cv::_OutputArray(*netout))); //call prediction (ask the output) of the object for a given input.
 
             for (int j=0; j<sizeOutLayer; j++){ //inserts the output in an output array
 #ifdef OPENCV2
                 tmpout=CV_MAT_ELEM(*netout,double,0,j);  //TODO find way to do it with OpenCV v.3+
 #else
-                tmpout = netout.at<double>(0, j);
+                tmpout = netout->at<double>(0, j);
 #endif
                 if  (tmpout > maxout){
                     noutput=j;
@@ -119,7 +119,6 @@ int PluginNeuralColorCalib::RunNeuralopenCV(double *input) {
     else
         return -1;
 }
-
 
 PluginNeuralColorCalib::PluginNeuralColorCalib(FrameBuffer * _buffer, YUVLUT * _lut, LUTChannelMode _mode) : VisionPlugin(_buffer)
 {
@@ -139,13 +138,13 @@ PluginNeuralColorCalib::PluginNeuralColorCalib(FrameBuffer * _buffer, YUVLUT * _
     realinput = cvCreateMat(1,3,CV_64F);
     netout = cvCreateMat(1,sizeOutLayer,CV_64F);
 #else
-    cv::Mat layer_sizes= cv::Mat(1,3,CV_32SC1,layersinfo);
     neuronet = cv::ml::ANN_MLP::create();
+    cv::Mat layer_sizes= cv::Mat(1,3,CV_32SC1,layersinfo);
     neuronet->setLayerSizes(layer_sizes);
     neuronet->setActivationFunction(cv::ml::ANN_MLP::SIGMOID_SYM, 1, 1);
     //variables used by OpenCV algorithm RunNeuralopenCV
-    realinput = cv::Mat(1,3,CV_64F);
-    netout = cv::Mat(1,sizeOutLayer,CV_64F);
+    realinput = new cv::Mat(1,3,CV_64F);
+    netout = new cv::Mat(1,sizeOutLayer,CV_64F);
 #endif
     //
 

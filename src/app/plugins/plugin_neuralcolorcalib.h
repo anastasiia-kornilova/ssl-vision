@@ -46,15 +46,16 @@ protected:
 #ifdef OPENCV2
     CvANN_MLP * neuronet; //Creation of the ANN object (OpenCV v.2)
 #else
-    cv::ml::ANN_MLP * neuronet; //Creation of the ANN object (OpenCV v.3+)
+    cv::Ptr<cv::ml::ANN_MLP> neuronet; //Creation of the ANN object (OpenCV v.3+)
 #endif
-    //variables used by OpenCV algorithm RunNeuralopenCV
 #ifdef OPENCV2
+    //variables used by OpenCV algorithm RunNeuralopenCV
     CvMat *realinput;
     CvMat *netout;
 #else
-    cv::Mat& realinput;
-    cv::Mat& netout;
+    //variables used by OpenCV algorithm RunNeuralopenCV
+    cv::Mat * realinput;
+    cv::Mat * netout;
 #endif
     std::vector<double> * neuro_trainingset; //size of training set.
     std::vector<double> * neuro_targset; //size of target set (outputs of the training set)
