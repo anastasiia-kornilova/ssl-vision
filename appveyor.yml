@@ -4,20 +4,21 @@ shallow_clone: true
 environment:
   global:
     MSYS_DIR: C:\msys64
-    QT_MinGW_DIR: C:\Qt\5.11.2\mingw53_32
   matrix:
     - platform: x86
       platform_name: i686
       bit: 32
+      QT_MinGW_DIR: C:\Qt\5.11\mingw53_32
     - platform: x64
       platform_name: x86_64
       bit: 64 
+      QT_MinGW_DIR: C:\Qt\5.12\mingw73_64
         
 
 init:
   - set PATH=%MSYS_DIR%\usr\bin
-  - IF %bit% EQU 64 
-    pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-qt5
+  #- IF %bit% EQU 32 
+  #  pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-qt5
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-protobuf
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-eigen3
   - pacman --noconfirm -Su mingw%bit%/mingw-w64-%platform_name%-cmake
