@@ -348,3 +348,19 @@ target_link_libraries(${gclient} ${libs})
 if(USE_QT5)
 	qt5_use_modules(${gclient} Widgets OpenGL)
 endif()
+if (WIN32)
+	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
+	file(WRITE "bin/vision.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/vision.exe")
+	file(WRITE "bin/graphicalClient.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/graphicalClient.exe")
+	file(WRITE "bin/logClient.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/logClient.exe")
+	file(WRITE "bin/client.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/client.exe")
+endif()
+
