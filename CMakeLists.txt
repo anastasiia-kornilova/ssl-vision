@@ -348,7 +348,7 @@ target_link_libraries(${gclient} ${libs})
 if(USE_QT5)
 	qt5_use_modules(${gclient} Widgets OpenGL)
 endif()
-if (WIN32)
+if(WIN32)
 	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
 	file(WRITE "bin/vision.cmd" "PATH=C:/Windows/System32;${RES}
 	cd ..
@@ -362,5 +362,69 @@ if (WIN32)
 	file(WRITE "bin/client.cmd" "PATH=C:/Windows/System32;${RES}
 	cd ..
 	start \"\" ./bin/client.exe")
+
+	set(COPY_ENABLE_FLAG 1)
+
+	if(COPY_ENABLE_FLAG)
+		set(DLL_LIB_LIST ${RES}/zlib1.dll
+				${RES}/tbb.dll
+				${RES}/libbz2-1.dll
+				${RES}/libfreetype-6.dll
+				${RES}/libgcc_s_seh-1.dll
+				${RES}/libgfortran-4.dll
+				${RES}/libglib-2.0-0.dll
+				${RES}/libgraphite2.dll
+				${RES}/libHalf-2_2.dll
+				${RES}/libharfbuzz-0.dll
+				${RES}/libiconv-2.dll
+				${RES}/libicudt61.dll
+				${RES}/libicuin61.dll
+				${RES}/libicuuc61.dll
+				${RES}/libIex-2_2.dll
+				${RES}/libIlmImf-2_2.dll
+				${RES}/libIlmThread-2_2.dll
+				${RES}/libImath-2_2.dll
+				${RES}/libintl-8.dll
+				${RES}/libjasper-4.dll
+				${RES}/libjpeg-8.dll
+				${RES}/liblzma-5.dll
+				${RES}/libopenblas.dll
+				${RES}/libpcre-1.dll
+				${RES}/libpcre2-16-0.dll
+				${RES}/libpng16-16.dll
+				${RES}/libprotobuf.dll
+				${RES}/libstdc++-6.dll
+				${RES}/libtiff-5.dll
+				${RES}/libwebp-7.dll
+				${RES}/libwinpthread-1.dll)
+
+		set(OPENCV3_DLL_LIST ${RES}/libopencv_core341.dll
+				${RES}/libopencv_imgcodecs341.dll
+				${RES}/libopencv_imgproc341.dll
+				${RES}/libopencv_ml341.dll
+				${RES}/libopencv_videoio341.dll)
+		set(QT5_DEBUG_DLL ${RES}/Qt5Cored.dll
+				${RES}/Qt5Guid.dll
+				${RES}/Qt5OpenGLd.dll
+				${RES}/Qt5Widgetsd.dll)
+		set(QT5_RELEASE_DLL ${RES}/Qt5Core.dll
+				${RES}/Qt5Gui.dll
+				${RES}/Qt5OpenGL.dll
+				${RES}/Qt5Widgets.dll)
+		if(OPENCV3)
+			list(APPEND DLL_LIB_LIST ${OPENCV3_DLL_LIST})
+		endif()
+
+		if(CMAKE_BUILD_TYPE STREQUAL Debug)
+			list(APPEND DLL_LIB_LIST ${QT5_DEBUG_DLL})
+		endif()
+		if(CMAKE_BUILD_TYPE STREQUAL Release)
+			list(APPEND DLL_LIB_LIST ${QT5_RELEASE_DLL})
+		endif()
+
+		file(COPY ${DLL_LIB_LIST}  DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+	endif()
 endif()
+
+
 
