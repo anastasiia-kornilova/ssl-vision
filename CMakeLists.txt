@@ -363,7 +363,7 @@ if(WIN32)
 	cd ..
 	start \"\" ./bin/client.exe")
 
-	set(COPY_ENABLE_FLAG 1)
+	set(COPY_ENABLE_FLAG 0) #set to 1 if you want to copy dll to bin directory
 
 	if(COPY_ENABLE_FLAG)
 		set(DLL_LIB_LIST ${RES}/zlib1.dll
@@ -398,11 +398,12 @@ if(WIN32)
 				${RES}/libwebp-7.dll
 				${RES}/libwinpthread-1.dll)
 
-		set(OPENCV3_DLL_LIST ${RES}/libopencv_core341.dll
-				${RES}/libopencv_imgcodecs341.dll
-				${RES}/libopencv_imgproc341.dll
-				${RES}/libopencv_ml341.dll
-				${RES}/libopencv_videoio341.dll)
+		string(REPLACE "." "" RES_OPENCV_VERSION ${OpenCV_VERSION})
+		set(OPENCV3_DLL_LIST ${RES}/libopencv_core${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_imgcodecs${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_imgproc${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_ml${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_videoio${RES_OPENCV_VERSION}.dll)
 		set(QT5_DEBUG_DLL ${RES}/Qt5Cored.dll
 				${RES}/Qt5Guid.dll
 				${RES}/Qt5OpenGLd.dll
