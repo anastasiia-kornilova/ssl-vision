@@ -349,8 +349,8 @@ if(USE_QT5)
 	qt5_use_modules(${gclient} Widgets OpenGL)
 endif()
 
-set(COPY_ENABLE_FLAG 1) #set to 1 if you want to copy dll to bin directory
-
+set(COPY_ENABLE_FLAG 0) #set to 1 if you want to copy dll to bin directory
+set(CXX_BIT 64)
 if(WIN32)
 	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
 	if (COPY_ENABLE_FLAG)
@@ -376,7 +376,6 @@ if(WIN32)
 				${RES}/tbb.dll
 				${RES}/libbz2-1.dll
 				${RES}/libfreetype-6.dll
-				${RES}/libgcc_s_seh-1.dll
 				${RES}/libgfortran-4.dll
 				${RES}/libglib-2.0-0.dll
 				${RES}/libgraphite2.dll
@@ -421,6 +420,12 @@ if(WIN32)
 				${RES}/Qt5Widgets.dll)
 		if(OPENCV3)
 			list(APPEND DLL_LIB_LIST ${OPENCV3_DLL_LIST})
+		endif()
+
+		if (CXX_BIT STREQUAL 64)
+			list(APPEND DLL_LIB_LIST ${RES}/libgcc_s_seh-1.dll)
+		else()
+			list(APPEND DLL_LIB_LIST ${RES}/libgcc_s_dw2-1.dll)
 		endif()
 
 		if(CMAKE_BUILD_TYPE STREQUAL Debug)
