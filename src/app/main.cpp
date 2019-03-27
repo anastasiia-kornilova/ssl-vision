@@ -84,6 +84,12 @@ void printPathWarning() {
 int main(int argc, char *argv[])
 {
   signal(SIGINT,HandleStop);
+  QStringList paths = QCoreApplication::libraryPaths();
+  paths.append(".");
+  paths.append("imageformats");
+  paths.append("platforms");
+  paths.append("sqldrivers");
+  QCoreApplication::setLibraryPaths(paths);
   QApplication app(argc, argv);
 
   GetOpt opts(argc, argv);

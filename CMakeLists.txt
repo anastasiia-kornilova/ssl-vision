@@ -348,8 +348,14 @@ target_link_libraries(${gclient} ${libs})
 if(USE_QT5)
 	qt5_use_modules(${gclient} Widgets OpenGL)
 endif()
+
+set(COPY_ENABLE_FLAG 1) #set to 1 if you want to copy dll to bin directory
+
 if(WIN32)
 	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
+	if (COPY_ENABLE_FLAG)
+		set(RES "")
+	endif()
 	file(WRITE "bin/vision.cmd" "PATH=C:/Windows/System32;${RES}
 	cd ..
 	start \"\" ./bin/vision.exe")
@@ -363,7 +369,7 @@ if(WIN32)
 	cd ..
 	start \"\" ./bin/client.exe")
 
-	set(COPY_ENABLE_FLAG 0) #set to 1 if you want to copy dll to bin directory
+	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
 
 	if(COPY_ENABLE_FLAG)
 		set(DLL_LIB_LIST ${RES}/zlib1.dll
@@ -396,6 +402,7 @@ if(WIN32)
 				${RES}/libstdc++-6.dll
 				${RES}/libtiff-5.dll
 				${RES}/libwebp-7.dll
+				${RES}/libquadmath-0.dll
 				${RES}/libwinpthread-1.dll)
 
 		string(REPLACE "." "" RES_OPENCV_VERSION ${OpenCV_VERSION})
