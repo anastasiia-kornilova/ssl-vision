@@ -22,18 +22,19 @@ CaptureOpenCv::CaptureOpenCv(VarList * _settings) : CaptureInterface(_settings)
 
 CaptureOpenCv::~CaptureOpenCv()
 {
+    frame.clear();
 }
 
 RawImage CaptureOpenCv::getFrame()
 {
     mutex.lock();
-    RawImage result;
-    result.setTime(0.0);
+    frame.clear();
+    frame.setTime(0.0);
 
     if (!mCapture.grab()) {
         qDebug() <<  "OpenCV Error: Failed to capture from camera" << mIndex;
         mCapture.release();
-        result.allocate(COLOR_RGB8, 640, 480);
+        frame.allocate(COLOR_RGB8, 640, 480);
     } else {
         cv::Mat image;
         mCapture.retrieve(image);
@@ -43,10 +44,10 @@ RawImage CaptureOpenCv::getFrame()
         int const width = image.cols;
         int const channels = 3;
 
-        result.allocate(COLOR_RGB8, width, height);
+        frame.allocate(COLOR_RGB8, width, height);
 
         rgbImage img;
-        img.fromRawImage(result);
+        img.fromRawImage(frame);
 
         for (int x = 0 ; x < width; x++) {
             for (int y = 0 ; y < height; y++) {
@@ -58,15 +59,15 @@ RawImage CaptureOpenCv::getFrame()
           }
         }
 
-        result.setWidth(width);
-        result.setHeight(height);
+        frame.setWidth(width);
+        frame.setHeight(height);
 
         timeval tv;
         gettimeofday(&tv,NULL);
-        result.setTime((double)tv.tv_sec + tv.tv_usec*(1.0E-6));
+        frame.setTime((double)tv.tv_sec + tv.tv_usec*(1.0E-6));
     }
     mutex.unlock();
-    return result;
+    return frame;
 }
 
 bool CaptureOpenCv::isCapturing()

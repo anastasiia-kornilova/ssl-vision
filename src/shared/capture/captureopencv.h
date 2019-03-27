@@ -21,6 +21,7 @@ public:
 private:
     cv::VideoCapture mCapture;
     VarList *mCaptureSettings;
+    RawImage frame;
     VarString *mIndex;
     QMutex mutex;
 };
