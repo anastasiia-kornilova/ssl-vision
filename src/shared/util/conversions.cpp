@@ -175,7 +175,7 @@ void Conversions::rgb2uyvy (unsigned char *src, unsigned char *dest, int width, 
     
     int NumPixels = width*height;
     
-    register int max_i = (NumPixels*3)-1;
+    register int max_i = (NumPixels * 3) - 1;
     //register int max_j = NumPixels + ( NumPixels << 1 ) -1;
     register int i = 0;
     register int j = 0;
@@ -183,17 +183,17 @@ void Conversions::rgb2uyvy (unsigned char *src, unsigned char *dest, int width, 
     register int r, g, b;
     
     while ( i < max_i ) {
-        r = ( unsigned char ) src[i++];
-        g = ( unsigned char ) src[i++];
-        b = ( unsigned char ) src[i++];
+        r = (unsigned char) src[i++];
+        g = (unsigned char) src[i++];
+        b = (unsigned char) src[i++];
         rgb2yuv ( r, g, b, y0, u0, v0);
-        r = ( unsigned char ) src[i++];
-        g = ( unsigned char ) src[i++];
-        b = ( unsigned char ) src[i++];
+        r = (unsigned char) src[i++];
+        g = (unsigned char) src[i++];
+        b = (unsigned char) src[i++];
         rgb2yuv ( r, g, b, y1, u1, v1);
-        dest[j++] = (u0+u1) >> 1;
+        dest[j++] = (u0 + u1) >> 1;
         dest[j++] = y0;
-        dest[j++] = (v0+v1) >> 1;
+        dest[j++] = (v0 + v1) >> 1;
         dest[j++] = y1;
     }
 #endif

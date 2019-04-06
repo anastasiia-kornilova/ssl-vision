@@ -19,7 +19,6 @@
 */
 //========================================================================
 
-
 #include <QMouseEvent>
 #include <QWidget>
 #include <QGLWidget>

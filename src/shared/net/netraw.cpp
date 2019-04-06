@@ -105,9 +105,9 @@ bool UDP::open(int port, bool share_port_for_multicasting, bool multicast_includ
   // set socket as non-blocking
 #ifdef __WIN32__
   DWORD nonBlocking = 1;
-  if ( ioctlsocket( fd, FIONBIO, &nonBlocking ) != 0 )
+  if (ioctlsocket(fd, FIONBIO, &nonBlocking) != 0)
   {
-    printf( "failed to set non-blocking socket\n" );
+    printf("failed to set non-blocking socket\n");
     return false;
   }
 #else
@@ -205,7 +205,7 @@ void UDP::close()
 
 bool UDP::send(const void *data,int length,const Address &dest)
 {
-  int len = sendto(fd,(const char*)data,length,0,&dest.addr,dest.addr_len);
+  int len = sendto(fd, (const char*)data, length, 0, &dest.addr, dest.addr_len);
 
   if(len > 0){
     sent_packets++;
@@ -215,10 +215,10 @@ bool UDP::send(const void *data,int length,const Address &dest)
   return(len == length);
 }
 
-int UDP::recv(void *data,int length,Address &src)
+int UDP::recv(void *data, int length, Address &src)
 {
   src.addr_len = sizeof(src.addr);
-  int len = recvfrom(fd,(char*)data,length,0,&src.addr,&src.addr_len);
+  int len = recvfrom(fd, (char*)data, length, 0, &src.addr, &src.addr_len);
 
   if(len > 0){
     recv_packets++;
@@ -239,9 +239,9 @@ bool UDP::wait(int timeout_ms) const
   pfd.events = POLLIN;
   pfd.revents = 0;
 #ifdef __WIN32__
-  return(WSAPoll(&pfd,1,timeout_ms) == 1);
+  return(WSAPoll(&pfd, 1, timeout_ms) == 1);
 #else
-  return(poll(&pfd,1,timeout_ms) == 1);
+  return(poll(&pfd, 1, timeout_ms) == 1);
 #endif
 }
 

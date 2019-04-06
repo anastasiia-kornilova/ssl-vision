@@ -20,7 +20,6 @@
 //========================================================================
 #ifndef GLLUTWIDGET_H_
 #define GLLUTWIDGET_H_
-
 #include <QtOpenGL/QGLWidget>
 #include <QTime>
 #include <QMutex>

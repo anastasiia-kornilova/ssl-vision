@@ -23,7 +23,6 @@
 #ifndef GRAPHICS_PRIMITIVES_H
 #define GRAPHICS_PRIMITIVES_H
 
-
 #include <QGraphicsItem>
 #include <QGraphicsPathItem>
 #include <QVector>

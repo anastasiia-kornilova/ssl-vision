@@ -49,19 +49,19 @@ int PluginNeuralColorCalib::TrainNeuralopenCV() {
     CvMat trainin;
     CvMat trainout;
 #else
-    cv::Mat trainin = cv::Mat(n_samples,3,CV_64F,training);
-    cv::Mat trainout = cv::Mat(n_samples,sizeOutLayer,CV_64F,target);
+    cv::Mat trainin = cv::Mat(n_samples, 3, CV_64F, training);
+    cv::Mat trainout = cv::Mat(n_samples, sizeOutLayer, CV_64F, target);
 #endif
-    int interactions_ran=0;
+    int interactions_ran = 0;
 #ifdef OPENCV2
-    term_crit.max_iter =1000; //maximum number of epochs to train
+    term_crit.max_iter = 1000; //maximum number of epochs to train
 #else
     term_crit.maxCount = 1000; //maximum number of epochs to train
 #endif
     term_crit.epsilon  = 1e-5; //maximum tolerance to errors of the network during training
     term_crit.type = CV_TERMCRIT_ITER + CV_TERMCRIT_EPS; //indicates training stops either when performance or max. epochs is reached
 #ifdef OPENCV2
-    netparams=CvANN_MLP_TrainParams(term_crit, CvANN_MLP_TrainParams::BACKPROP,0.1,0.1); //specifies learning algorithm, learning rate and momentum
+    netparams = CvANN_MLP_TrainParams(term_crit, CvANN_MLP_TrainParams::BACKPROP, 0.1, 0.1); //specifies learning algorithm, learning rate and momentum
 #else
     neuronet->setTermCriteria(term_crit);
     neuronet->setTrainMethod(cv::ml::ANN_MLP::TrainingMethods::BACKPROP, 0.1, 0.1);
@@ -80,7 +80,7 @@ int PluginNeuralColorCalib::TrainNeuralopenCV() {
     cv::Ptr<cv::ml::TrainData> trData = cv::ml::TrainData::create(trainin, cv::ml::SampleTypes::ROW_SAMPLE, trainout);
 #endif
 #ifdef OPENCV2
-    interactions_ran = neuronet->train (&trainin, &trainout,0,0,netparams,0); //call training functions of the object
+    interactions_ran = neuronet->train (&trainin, &trainout, 0, 0, netparams, 0); //call training functions of the object
 #else
     interactions_ran = neuronet->train (trData, 0); //call training functions of the object
 #endif
@@ -131,23 +131,21 @@ PluginNeuralColorCalib::PluginNeuralColorCalib(FrameBuffer * _buffer, YUVLUT * _
     int layersinfo[sizeInputLayer]={sizeInputLayer,sizeHidLayer,sizeOutLayer};
 
 #ifdef OPENCV2
-    CvMat layer_sizes= cvMat(1,3,CV_32SC1,layersinfo);
-    neuronet = new CvANN_MLP(&layer_sizes,CvANN_MLP::SIGMOID_SYM,1,1);
+    CvMat layer_sizes= cvMat(1, 3, CV_32SC1, layersinfo);
+    neuronet = new CvANN_MLP(&layer_sizes, CvANN_MLP::SIGMOID_SYM, 1, 1);
 
     //variables used by OpenCV algorithm RunNeuralopenCV
-    realinput = cvCreateMat(1,3,CV_64F);
-    netout = cvCreateMat(1,sizeOutLayer,CV_64F);
+    realinput = cvCreateMat(1, 3, CV_64F);
+    netout = cvCreateMat(1, sizeOutLayer, CV_64F);
 #else
     neuronet = cv::ml::ANN_MLP::create();
-    cv::Mat layer_sizes= cv::Mat(1,3,CV_32SC1,layersinfo);
+    cv::Mat layer_sizes= cv::Mat(1, 3, CV_32SC1, layersinfo);
     neuronet->setLayerSizes(layer_sizes);
     neuronet->setActivationFunction(cv::ml::ANN_MLP::SIGMOID_SYM, 1, 1);
     //variables used by OpenCV algorithm RunNeuralopenCV
-    realinput = new cv::Mat(1,3,CV_64F);
-    netout = new cv::Mat(1,sizeOutLayer,CV_64F);
+    realinput = new cv::Mat(1, 3, CV_64F);
+    netout = new cv::Mat(1, sizeOutLayer, CV_64F);
 #endif
-    //
-
     isNetSet=false;
     n_samples=0;
     neuro_trainingset = new std::vector<double>;

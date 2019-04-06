@@ -102,8 +102,10 @@ bool CaptureGenerator::copyAndConvertFrame ( const RawImage & src, RawImage & ta
   } else if ( src_fmt == COLOR_RGB8 && output_fmt == COLOR_YUV422_UYVY ) {
     if ( src.getData() != 0 ) {
 #ifndef __WIN32__
-      dc1394_convert_to_YUV422 ( src.getData(), target.getData(), src.getWidth(), src.getHeight(),
-                                 DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_RGB8, 8 );
+      dc1394_convert_to_YUV422 (src.getData(), target.getData(), src.getWidth(), src.getHeight(),
+                                 DC1394_BYTE_ORDER_UYVY, DC1394_COLOR_CODING_RGB8, 8);
+#else
+      Conversions::rgb2uyvy(src.getData(), target.getData(), src.getWidth(), src.getHeight());
 #endif
     }
   } else {

@@ -22,7 +22,6 @@
 #define GLWIDGET_H_
 
 
-
 #include <QtOpenGL/QGLWidget>
 #include <QTime>
 #include <QMutex>
