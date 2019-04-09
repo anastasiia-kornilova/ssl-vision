@@ -112,7 +112,7 @@ private:
     char szDevice[128];
     struct v4l2_buffer tempbuf;
     image_t img[V4L_STREAMBUFS];
-
+    
     bool enqueueBuffer(v4l2_buffer &buf);
     bool dequeueBuffer(v4l2_buffer &buf);
     bool waitForFrame(int max_msec=500);
@@ -120,7 +120,7 @@ private:
     bool obtainInstance(int iDevice);
     bool obtainInstance(char *szDevice);
     bool removeInstance(bool bRelock=true);
-
+    
     static int xioctl(int fd,int request,void *data, const char *error_str);
     bool xioctl(int request,void *data, const char *error_str);
 
@@ -131,12 +131,12 @@ public:
                       long *lDefault=NULL, long *lMin=NULL, long *lMax=NULL);
     bool startStreaming(int iWidth_, int iHeight_, int iInput=0);
     bool stopStreaming();
-
+    
     void captureWarm(int iMaxSpin=1);
     bool captureFrame(RawImage *pImage, int iMaxSpin=1);
     const image_t *captureFrame(int iMaxSpin=1);
     bool releaseFrame(const image_t *_img);
-
+    
 private:
     void lock() {
 #ifndef VDATA_NO_QT
@@ -152,7 +152,7 @@ private:
         pthread_mutex_unlock();
 #endif
     }
-
+    
 // utility functions for testing before ssl-vision
 public:
     struct yuyv{
@@ -169,7 +169,7 @@ public:
 private:
     static bool getImageRgb(GlobalV4Linstance::yuyv *pSrc, int width, int height, GlobalV4Linstance::rgb **rgbbuf);
     static GlobalV4Linstance::rgb yuv2rgb(GlobalV4Linstance::yuv p);
-
+    
 };
 
 
@@ -202,13 +202,13 @@ private:
  \class CaptureV4L
  \brief A v4l-based USB/Video For Linux Capture Class
  \author  Eric Zavesky, (C) 2016
-
+ 
  This class mirrors popular v4l implementations giving the most
  compatible options and based on the DC1394 base classes by Stefan.
-
+ 
  Overall, it not only provides capture-abilities, but also full
  on-the-fly configuration abilities through the VarTypes system.
-
+ 
  If you find your camera not working correctly, or discover a bug,
  please inform the author, but also consider contributing yourself,
  so that we can cover as many options as possible.
@@ -229,14 +229,14 @@ protected:
     QMutex mutex;
 public:
 #endif
-
-
+    
+    
 protected:
     bool is_capturing;
-
+    
     //processing variables:
     VarStringEnum * v_colorout;
-
+    
     //DCAM parameters:
     VarList * P_BRIGHTNESS;
     VarList * P_CONTRAST;
@@ -249,7 +249,7 @@ protected:
     VarList * P_GAIN;
     VarList * P_TEMPERATURE;  // white balance temperature
     VarList * P_FRAME_RATE;
-
+    
     //capture variables:
     VarInt    * v_cam_bus;
     VarInt    * v_fps;
@@ -260,7 +260,7 @@ protected:
     VarStringEnum * v_colormode;
     VarStringEnum * v_format;
     VarInt    * v_buffer_size;
-
+    
     int cam_id;
     int width;
     int height;
@@ -271,13 +271,13 @@ protected:
     int cam_list[MAX_CAM_SCAN];
     int cam_count;
     RawImage rawFrame;
-
+    
     GlobalV4Linstance * camera_instance;
-
+    
     VarList * dcam_parameters;
     VarList * capture_settings;
     VarList * conversion_settings;
-
+    
 public:
 #ifndef VDATA_NO_QT
     CaptureV4L(VarList * _settings=0,int default_camera_id=0,QObject * parent=0);
@@ -286,64 +286,64 @@ public:
     CaptureV4L(VarList * _settings=0,int default_camera_id=0);
 #endif
     ~CaptureV4L();
-
+    
     /// Initialize the interface and start capture
     virtual bool startCapture();
-
+    
     /// Stop Capture
     virtual bool stopCapture();
-
+    
     virtual bool isCapturing() { return is_capturing; };
-
+    
     /// This function converts a local variable pointer to enum
     v4lfeature_t getV4LfeatureEnum(VarList * val, bool & valid);
     v4lfeature_t getV4LfeatureEnum(VarList * val) {
         bool b=true;
         return getV4LfeatureEnum(val,b);
     }
-
+    
     /// This function converts a V4L feature into a local variable Pointer
     VarList * getVariablePointer(v4lfeature_t val);
-
+    
     /// this gives a raw-image with a pointer directly to the video-buffer
     /// Note that this pointer is only guaranteed to point to a valid
     /// memory location until releaseFrame() is called.
     virtual RawImage getFrame();
-
+    
     virtual void releaseFrame();
-
+    
     virtual bool resetBus();
-
+    
     void cleanup();
-
+    
     void readParameterValues(VarList * item);
-
+    
     void writeParameterValues(VarList * item);
-
+    
     void readParameterProperty(VarList * item);
-
+    
     void readAllParameterProperties();
-
+    
     /// will perform a pure memcpy of an image, independent of vartypes
     /// conversion settings
     bool copyFrame(const RawImage & src, RawImage & target);
-
+    
     virtual void readAllParameterValues();
-
+    
     void writeAllParameterValues();
-
+    
     virtual bool copyAndConvertFrame(const RawImage & src, RawImage & target);
-
+    
     virtual string getCaptureMethodName() const;
-
+    
 protected:
     /// This function is used internally only
     /// The user should call copyAndConvertFrame with parameters setup through the
     /// VarTypes settings.
     bool convertFrame(const RawImage & src, RawImage & target,
                       ColorFormat output_fmt, int y16bits=16);
-
-
+    
+    
 };
 
 #endif
