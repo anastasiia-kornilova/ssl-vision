@@ -31,6 +31,9 @@
 
 #include "gvector.h"
 #include "geomalgo.h"
+#ifdef __WIN32__
+  #include <stdint.h>
+#endif
 
 typedef GVector::vector2d<double> vector2d;
 typedef GVector::vector3d<double> vector3d;

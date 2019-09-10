@@ -41,9 +41,11 @@
 #include "plugin_dvr.h"
 #include "cmpattern_teamdetector.h"
 #include "robocup_ssl_server.h"
-
-#ifdef OPENCV
-#include "plugin_neuralcolorcalib.h"
+#ifdef OPENCV2
+  #include "plugin_neuralcolorcalib.h"
+#endif
+#ifdef OPENCV3
+  #include "plugin_neuralcolorcalib.h"
 #endif
 
 using namespace std;

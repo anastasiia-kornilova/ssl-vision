@@ -40,6 +40,7 @@ void HandleStop(int i) {
 }
 
 // Print a path warning if the running directory is NOT one level above the binary directory
+#ifndef __WIN32__
 void printPathWarning() {
   char cwd[PATH_MAX];
   char* result = getcwd(cwd, PATH_MAX);
@@ -78,10 +79,19 @@ void printPathWarning() {
     msgBox.exec();
   }
 }
+#endif
 
 int main(int argc, char *argv[])
 {
   signal(SIGINT,HandleStop);
+#ifdef __WIN32__
+  QStringList paths = QCoreApplication::libraryPaths();
+  paths.append(".");
+  paths.append("imageformats");
+  paths.append("platforms");
+  paths.append("sqldrivers");
+  QCoreApplication::setLibraryPaths(paths);
+#endif
   QApplication app(argc, argv);
 
   GetOpt opts(argc, argv);
@@ -106,7 +116,9 @@ int main(int argc, char *argv[])
     exit(ecode);
   }
 
+#ifndef __WIN32__
   printPathWarning();
+#endif
 
   MainWindow mainWin(start, enforce_affinity);
   mainWinPtr = &mainWin;

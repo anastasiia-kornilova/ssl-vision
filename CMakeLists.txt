@@ -1,5 +1,6 @@
 project(ssl-vision)
-set(USE_QT5 FALSE CACHE BOOL "Use Qt5 instead of Qt4")
+#set(USE_QT5 FALSE CACHE BOOL "Use Qt5 instead of Qt4")
+set(USE_QT5 TRUE)
 if(USE_QT5)
 	cmake_minimum_required(VERSION 2.8.9)
 	if(POLICY CMP0020)
@@ -16,10 +17,16 @@ else()
 endif()
 
 #defines
-add_definitions(-D UNIX)
-add_definitions(-D LINUX)
-add_definitions(-D _GNU_SOURCE)
+if (UNIX)
+	add_definitions(-D UNIX)
+	add_definitions(-D LINUX)
+	add_definitions(-D _GNU_SOURCE)
+endif()
+
 add_definitions(-std=c++11)
+
+add_definitions(-w) # for testing without warnings
+
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -38,7 +45,13 @@ endif()
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Eigen3 REQUIRED eigen3)
-pkg_check_modules(DC1394 REQUIRED libdc1394-2)
+if (UNIX)
+	pkg_check_modules(DC1394 REQUIRED libdc1394-2)
+endif()
+
+if(WIN32)
+	add_definitions(-D WIN32_LEAN_AND_MEAN)
+endif()
 
 if(USE_QT5)
 	set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -95,14 +108,31 @@ else()
   message(STATUS "Flycapture NOT found => Flycap support disabled")
 endif()
 
-find_package( OpenCV 2 QUIET )
+find_package( OpenCV 3 QUIET )
+if(OpenCV_FOUND)
+	add_definitions(-D OPENCV3)
+	set(OPENCV3 1)
+else()
+	find_package(OpenCV 2 QUIET)
+	if (OpenCV_FOUND)
+		add_definitions(-D OPENCV2)
+		set(OPENCV2 1)
+	endif()
+endif()
+
 if(OpenCV_FOUND)
   include_directories(${OpenCV_INCLUDE_DIRS})
-  add_definitions(-D OPENCV)
+  if(OPENCV2)
+	message(STATUS "OPENCV2 found")
+  endif()
+  if (OPENCV3)
+	message(STATUS "OPENCV3 found")
+	set (SHARED_SRCS ${SHARED_SRCS} ${shared_dir}/capture/captureopencv.cpp)
+	set (SHARED_HEADERS ${SHARED_HEADERS} ${shared_dir}/capture/captureopencv.h)
+  endif()
   set (OPTIONAL_SRCS ${OPTIONAL_SRCS} src/app/gui/neurowidget.cpp src/app/plugins/plugin_neuralcolorcalib.cpp)
   set (OPTIONAL_HEADERS ${OPTIONAL_HEADERS} src/app/gui/neurowidget.h)
   set (OPTIONAL_UI_SRCS ${OPTIONAL_UI_SRCS} src/app/gui/neurowidget.ui)
-  message(STATUS "OpenCV found")
 else()
   message(WARNING "OpenCV NOT found => Neural Calibration not available")
 endif()
@@ -265,6 +295,12 @@ set (libs ${QT_LIBRARIES}
 	${OpenCV_LIBS}
 	${FLYCAP_LIBS}
 )
+
+if (WIN32)
+	list(APPEND libs "wsock32")
+	list(APPEND libs "ws2_32")
+endif()
+
 target_link_libraries(sslvision ${libs})
 if(USE_QT5)
 	qt5_use_modules(sslvision Widgets)
@@ -312,3 +348,96 @@ target_link_libraries(${gclient} ${libs})
 if(USE_QT5)
 	qt5_use_modules(${gclient} Widgets OpenGL)
 endif()
+
+set(COPY_ENABLE_FLAG 0) #set to 1 if you want to copy dll to bin directory
+set(CXX_BIT 64)
+if(WIN32)
+	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
+	if (COPY_ENABLE_FLAG)
+		set(RES "")
+	endif()
+	file(WRITE "bin/vision.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/vision.exe")
+	file(WRITE "bin/graphicalClient.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/graphicalClient.exe")
+	file(WRITE "bin/logClient.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/logClient.exe")
+	file(WRITE "bin/client.cmd" "PATH=C:/Windows/System32;${RES}
+	cd ..
+	start \"\" ./bin/client.exe")
+
+	string(REPLACE "/g++.exe" "" RES ${CMAKE_CXX_COMPILER})
+
+	if(COPY_ENABLE_FLAG)
+		set(DLL_LIB_LIST ${RES}/zlib1.dll
+				${RES}/tbb.dll
+				${RES}/libbz2-1.dll
+				${RES}/libfreetype-6.dll
+				${RES}/libgfortran-4.dll
+				${RES}/libglib-2.0-0.dll
+				${RES}/libgraphite2.dll
+				${RES}/libHalf-2_2.dll
+				${RES}/libharfbuzz-0.dll
+				${RES}/libiconv-2.dll
+				${RES}/libicudt61.dll
+				${RES}/libicuin61.dll
+				${RES}/libicuuc61.dll
+				${RES}/libIex-2_2.dll
+				${RES}/libIlmImf-2_2.dll
+				${RES}/libIlmThread-2_2.dll
+				${RES}/libImath-2_2.dll
+				${RES}/libintl-8.dll
+				${RES}/libjasper-4.dll
+				${RES}/libjpeg-8.dll
+				${RES}/liblzma-5.dll
+				${RES}/libopenblas.dll
+				${RES}/libpcre-1.dll
+				${RES}/libpcre2-16-0.dll
+				${RES}/libpng16-16.dll
+				${RES}/libprotobuf.dll
+				${RES}/libstdc++-6.dll
+				${RES}/libtiff-5.dll
+				${RES}/libwebp-7.dll
+				${RES}/libquadmath-0.dll
+				${RES}/libwinpthread-1.dll)
+
+		string(REPLACE "." "" RES_OPENCV_VERSION ${OpenCV_VERSION})
+		set(OPENCV3_DLL_LIST ${RES}/libopencv_core${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_imgcodecs${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_imgproc${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_ml${RES_OPENCV_VERSION}.dll
+				${RES}/libopencv_videoio${RES_OPENCV_VERSION}.dll)
+		set(QT5_DEBUG_DLL ${RES}/Qt5Cored.dll
+				${RES}/Qt5Guid.dll
+				${RES}/Qt5OpenGLd.dll
+				${RES}/Qt5Widgetsd.dll)
+		set(QT5_RELEASE_DLL ${RES}/Qt5Core.dll
+				${RES}/Qt5Gui.dll
+				${RES}/Qt5OpenGL.dll
+				${RES}/Qt5Widgets.dll)
+		if(OPENCV3)
+			list(APPEND DLL_LIB_LIST ${OPENCV3_DLL_LIST})
+		endif()
+
+		if (CXX_BIT STREQUAL 64)
+			list(APPEND DLL_LIB_LIST ${RES}/libgcc_s_seh-1.dll)
+		else()
+			list(APPEND DLL_LIB_LIST ${RES}/libgcc_s_dw2-1.dll)
+		endif()
+
+		if(CMAKE_BUILD_TYPE STREQUAL Debug)
+			list(APPEND DLL_LIB_LIST ${QT5_DEBUG_DLL})
+		endif()
+		if(CMAKE_BUILD_TYPE STREQUAL Release)
+			list(APPEND DLL_LIB_LIST ${QT5_RELEASE_DLL})
+		endif()
+
+		file(COPY ${DLL_LIB_LIST}  DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+	endif()
+endif()
+
+
+

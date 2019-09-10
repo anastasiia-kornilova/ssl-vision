@@ -19,6 +19,9 @@
 */
 //========================================================================
 #include "affinity_manager.h"
+#ifdef __WIN32__
+  #include <processthreadsapi.h>
+#endif
 
 AffinityManager::AffinityManager()
 {
@@ -37,6 +40,7 @@ AffinityManager::~AffinityManager()
 void AffinityManager::demandCore(int core) {
 
   DT_LOCK;
+#ifndef __WIN32__
   unsigned int tid=(long int)syscall(__NR_gettid);
   printf("The ID of this thread is: %d\n", tid);
   cpu_set_t cpu_set;
@@ -46,7 +50,7 @@ void AffinityManager::demandCore(int core) {
     CPU_CLR(i, &cpu_set);
   }
   int max_cores=cores.size();
- 
+
 
   if (core < 0) core=0;
   int modded_core=core % max_cores;
@@ -69,8 +73,8 @@ void AffinityManager::demandCore(int core) {
     }
   } else {
     printf("Error while setting affinity\n");
-  }	
-
+  }
+#endif
   DT_UNLOCK;
 }
 

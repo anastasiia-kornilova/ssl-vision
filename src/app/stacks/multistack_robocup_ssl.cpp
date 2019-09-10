@@ -144,12 +144,12 @@ void MultiStackRoboCupSSL::UpdateServerSettings(const int port,
 void MultiStackRoboCupSSL::RefreshLegacyNetworkOutput() {
   const string address =
       legacy_network_output_settings->multicast_address->getString();
-  const string interface =
+  const string interface_ =
       legacy_network_output_settings->multicast_interface->getString();
   UpdateServerSettings(
       legacy_network_output_settings->ds_multicast_port_old->getInt(),
       address,
-      interface,
+      interface_,
       "DOUBLE-SIZE FIELD (OLD FORMAT)",
       ds_udp_server_old
   );

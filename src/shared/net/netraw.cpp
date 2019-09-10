@@ -1,12 +1,18 @@
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/poll.h>
+#ifdef __WIN32__
+  #include <w32api.h>
+  #define _WIN32_WINNT WindowsVista
+  #include <Winsock2.h>
+  #include <ws2tcpip.h>
+#else
+  #include <sys/socket.h>
+  #include <sys/poll.h>
+  #include <netdb.h>
+#endif
 
 #include <stdio.h>
-#include <netdb.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
-
 #include "util.h"
 
 #include "netraw.h"
@@ -49,12 +55,20 @@ void Address::setAny(int port)
   s->sin_port = htons(port);
   addr_len = sizeof(sockaddr_in);
 }
+#ifdef __WIN32__
+    u_long Address::getInAddr() const
+    {
+      const sockaddr_in *s = (sockaddr_in*)(&addr);
+      return(s->sin_addr.s_addr);
+    }
+#else
+    in_addr_t Address::getInAddr() const
+    {
+      const sockaddr_in *s = (sockaddr_in*)(&addr);
+      return(s->sin_addr.s_addr);
+    }
+#endif
 
-in_addr_t Address::getInAddr() const
-{
-  const sockaddr_in *s = (sockaddr_in*)(&addr);
-  return(s->sin_addr.s_addr);
-}
 
 void Address::print(FILE *out) const
 {
@@ -83,15 +97,24 @@ void Address::print(FILE *out) const
 bool UDP::open(int port, bool share_port_for_multicasting, bool multicast_include_localhost, bool blocking)
 {
   const int TTL = 32;
-  
+
   // open the socket
   if(fd >= 0) ::close(fd);
   fd = socket(PF_INET, SOCK_DGRAM, 0);
 
   // set socket as non-blocking
+#ifdef __WIN32__
+  DWORD nonBlocking = 1;
+  if (ioctlsocket(fd, FIONBIO, &nonBlocking) != 0)
+  {
+    printf("failed to set non-blocking socket\n");
+    return false;
+  }
+#else
   int flags = fcntl(fd, F_GETFL, 0);
   if(flags < 0) flags = 0;
   fcntl(fd, F_SETFL, flags | (blocking ? 0 : O_NONBLOCK));
+#endif
 
   if (share_port_for_multicasting) {
     int reuse=1;
@@ -114,7 +137,7 @@ bool UDP::open(int port, bool share_port_for_multicasting, bool multicast_includ
     }
   }
 	// sets the TTL value so routing of the packet is possible, if needed.
-  int ret = setsockopt(fd, IPPROTO_IP, IP_MULTICAST_TTL, &TTL, sizeof(TTL));
+  int ret = setsockopt(fd, IPPROTO_IP, IP_MULTICAST_TTL, (const char*)&TTL, sizeof(TTL));
   if(ret != 0)
   {
     printf("ERROR %d WHEN SETTING IP_MULTICAST_TTL\n", ret);
@@ -142,28 +165,28 @@ bool UDP::open(int port, bool share_port_for_multicasting, bool multicast_includ
   return(true);
 }
 
-bool UDP::addMulticast(const Address &multiaddr,const Address &interface)
+bool UDP::addMulticast(const Address &multiaddr,const Address &interface_)
 {
   static const bool debug = false;
   struct ip_mreq imreq;
   imreq.imr_multiaddr.s_addr = multiaddr.getInAddr();
-  imreq.imr_interface.s_addr = interface.getInAddr();
+  imreq.imr_interface.s_addr = interface_.getInAddr();
 
   if(debug){
     printf("0x%08X 0x%08X\n",
-           (unsigned)interface.getInAddr(),
+           (unsigned)interface_.getInAddr(),
            (unsigned)INADDR_ANY);
   }
 
   int ret = setsockopt(fd, IPPROTO_IP, IP_ADD_MEMBERSHIP,
-                       &imreq, sizeof(imreq));
+                       (const char*)&imreq, sizeof(imreq));
   if(debug) printf("ret=%d\n",ret);
   if(ret != 0)
     return false;
     
   //set multicast output interface
   ret = setsockopt(fd, IPPROTO_IP, IP_MULTICAST_IF,
-                   &imreq.imr_interface.s_addr, sizeof(imreq.imr_interface.s_addr));
+                   (const char*)&imreq.imr_interface.s_addr, sizeof(imreq.imr_interface.s_addr));
   if(debug) printf("ret=%d\n",ret);
 
   return(ret == 0);
@@ -182,7 +205,7 @@ void UDP::close()
 
 bool UDP::send(const void *data,int length,const Address &dest)
 {
-  int len = sendto(fd,data,length,0,&dest.addr,dest.addr_len);
+  int len = sendto(fd, (const char*)data, length, 0, &dest.addr, dest.addr_len);
 
   if(len > 0){
     sent_packets++;
@@ -192,10 +215,10 @@ bool UDP::send(const void *data,int length,const Address &dest)
   return(len == length);
 }
 
-int UDP::recv(void *data,int length,Address &src)
+int UDP::recv(void *data, int length, Address &src)
 {
   src.addr_len = sizeof(src.addr);
-  int len = recvfrom(fd,data,length,0,&src.addr,&src.addr_len);
+  int len = recvfrom(fd, (char*)data, length, 0, &src.addr, &src.addr_len);
 
   if(len > 0){
     recv_packets++;
@@ -207,12 +230,19 @@ int UDP::recv(void *data,int length,Address &src)
 
 bool UDP::wait(int timeout_ms) const
 {
+#ifdef __WIN32__
+  WSAPOLLFD pfd;
+#else
   pollfd pfd;
+#endif
   pfd.fd = fd;
   pfd.events = POLLIN;
   pfd.revents = 0;
-
-  return(poll(&pfd,1,timeout_ms) == 1);
+#ifdef __WIN32__
+  return(WSAPoll(&pfd, 1, timeout_ms) == 1);
+#else
+  return(poll(&pfd, 1, timeout_ms) == 1);
+#endif
 }
 
 }; // namespace Net

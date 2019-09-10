@@ -170,7 +170,12 @@ inline double GetTimeSec()
 inline void GetDate(struct tm &date)
 {
   time_t t = time(NULL);
+#ifdef __WIN32__
+  localtime_s(&date, &t);
+#else
   localtime_r(&t,&date);
+#endif
+
 }
 
 // returns CPU clock rate in MHz

@@ -24,6 +24,10 @@
 
 #include "util.h"
 #include "colors.h"
+#ifdef __WIN32__
+  #define NO_DC1394_CONVERSIONS
+#endif
+
 #ifndef NO_DC1394_CONVERSIONS
   #include <dc1394/conversions.h>
 #endif

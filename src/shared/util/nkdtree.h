@@ -136,14 +136,14 @@ public:
 NKD_TEM
 double NKD_FUN::distFromQuery(Node *p)
 {
-  vec_t near;
-  near.bound(query_point, p->min, p->max);
+  vec_t near_;
+  near_.bound(query_point, p->min, p->max);
   if(!scaled){
-    return(dist(query_point, near));
+    return(dist(query_point, near_));
   }else{
     double d = 0.0;
     for(int i=0; i<dim; i++){
-      d += sq((query_point[i] - near[i]) * scale[i]);
+      d += sq((query_point[i] - near_[i]) * scale[i]);
     }
     return(sqrt(d));
   }
