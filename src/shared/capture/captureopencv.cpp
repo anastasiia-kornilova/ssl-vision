@@ -1,7 +1,9 @@
 #include "captureopencv.h"
 
+#ifndef OPENCV4
 #include <opencv/cv.h>
 #include <opencv/cxcore.h>
+#endif
 
 #include <sys/time.h>
 #include <time.h>

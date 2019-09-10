@@ -1,6 +1,11 @@
 #pragma once
 
+
+#ifdef OPENCV4
+#include <opencv2/highgui.hpp>
+#else
 #include <opencv/highgui.h>
+#endif
 #include <opencv2/videoio.hpp>
 
 #include "captureinterface.h"
